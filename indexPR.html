@@ -1,3 +1,4 @@
+<!DOCTYPE html><html>
 <head>
     <title>Work in progress</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
             margin-right: auto;
             padding-top: 20px;
         }
-        .button {
+        .option {
             border: 3px solid #0077B8;
             border-radius: 30px 30px 30px 5px;
             display: inline-block;
@@ -65,6 +66,19 @@
             color: #ADE8F4;
             text-align: center;
             }
+        #optionA,
+        #optionB,
+        #optionC,
+        #optionD {
+            background-image: linear-gradient(to right, #023E8A , #0077B8);
+            border: 2px solid #0077B8;
+            border-radius: 5px;
+            color: #ADE8F4;
+            height: 30px;
+            width: 175px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
         </style>
 </head>
 
@@ -84,9 +98,15 @@
 <main>
     <section>
         <h1>Level 1</h1><br>
-        <script src="questionOne.js"></script>
+        <p>Which song is not made by Michael Jackson?</p><br>
+        <button id="optionA" data-index="0"><p>Thriller</p></button>
+        <button id="optionB" data-index="1"><p>Billie Jean</p></button><br>
+        <button id="optionC" data-index="2"><p>Born to Run</p></button>
+        <button id="optionD" data-index="3"><p>Beat It</p></button>
     </section>
 </main>
 <footer>
-
+    
 </footer>
+</html>
+<script src="questionOne.js"></script>
