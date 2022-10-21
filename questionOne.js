@@ -1,7 +1,14 @@
 
-function questOne() {
-    var question = document.write("<p>Wich song is not made by Michael Jackson</p>");
+var question = document.getElementById("qOneInner");
+var options = document.getElementById("optOneInner");
 
-    var answers = ["Thriller", "Billie Jean", "Born to Run", "Beat It"];
-    var correctAnswer = [3]
+
+function questOne() {
+    var example = ("What song is not made by Michael Jackson?");
+
+    var opt1 = ["Thriller", "Billie Jean", "Born to Run", "Beat It"];
+    var answer = [3];
+    question.innerText=example;
 }
+
+questOne();
