@@ -40,6 +40,7 @@ function questTwo() {
     opt1[0,1,2] = false;
     opt1[3] = true;
     
+    console.log(opt1[index]);
 } 
 
 questTwo();
