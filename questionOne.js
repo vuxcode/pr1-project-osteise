@@ -53,8 +53,25 @@ function questTwo() {
     optD = true;
 } 
 
-// control wich question will be asked
-questTwo();
+
+// create a random function generator to choose a random question
+function randomQuestion() {
+    // create the random variable
+    var random = Math.floor(Math.random() * 2);
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOne();
+            break;
+            case 1: 
+            questTwo();
+            break;
+        }
+    }
+
+// run the random function generator
+randomQuestion();
+    
 
 // create function to check option A
 function checkAnswerA() {
