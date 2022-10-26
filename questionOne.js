@@ -78,15 +78,15 @@ function checkAnswerA() {
     if (optA == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2021');
-        submit.innerText="That is incorrect..";
+        submitInner.innerText="That is incorrect..";
     }
     else {
     console.log("That's correct!");
-    correctColor('#7ABB6C');
-    submit.innerText="That is correct!";
+    correctColor('#0F5132');
+    submitInner.innerText="That is correct!\n Press this button to move to the next question!";
     // enable the submit button
     submit.disabled = false;
-}
+    }
 // disable ALL the option buttons
 optionA.disabled = true;
 optionB.disabled = true;
@@ -99,12 +99,12 @@ function checkAnswerB() {
     if (optB == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2021');
-        submit.innerText="That is incorrect.."
+        submitInner.innerText="That is incorrect.."
     }
     else {
     console.log("That's correct!");
-    correctColor('#7ABB6C');
-    submit.innerText="That is correct!";
+    correctColor('#0F5132');
+    submitInner.innerText="That is correct!\n Press this button to move to the next question!";
     // enable the submit button
     submit.disabled = false;
     }
@@ -120,12 +120,12 @@ function checkAnswerC() {
     if (optC == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2021');
-        submit.innerText="That is incorrect.."
+        submitInner.innerText="That is incorrect..";
     }
     else {
         console.log("That's correct!");
-        correctColor('#7ABB6C');
-        submit.innerText="That is correct!";
+        correctColor('#0F5132');
+        submitInner.innerText="That is correct!\n Press this button to move to the next question!";
         // enable the submit button
         submit.disabled = false;
     }
@@ -141,12 +141,12 @@ function checkAnswerD() {
     if (optD == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2012');
-        submit.innerText="That is incorrect..";
+        submitInner.innerText="That is incorrect..";
     }
     else {
         console.log("That's correct!");
-        correctColor('#7ABB6C');
-        submit.innerText="That is correct!";
+        correctColor('#0F5132');
+        submitInner.innerText="That is correct!\n Press this button to move to the next question!";
         // enable the submit button
         submit.disabled = false;
     }
