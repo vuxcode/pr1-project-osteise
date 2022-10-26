@@ -5,8 +5,12 @@ var optB = document.getElementById("optBInner");
 var optC = document.getElementById("optCInner");
 var optD = document.getElementById("optDInner");
 
+// create the submit button element
 var submitButton = document.getElementById("submitInner");
+// create the default text to the submit button
 submitButton.innerText="Press the option you think is correct\n to submit your answer!";
+// disable submit button
+submit.disabled = true;
 
 
 // create a function to output question number one
@@ -49,10 +53,8 @@ function questTwo() {
     optD = true;
 } 
 
-// disable submit button
-//submit.disabled = true;
 // control wich question will be asked
-questOne();
+questTwo();
 
 // create function to check option A
 function checkAnswerA() {
@@ -65,12 +67,14 @@ function checkAnswerA() {
     console.log("That's correct!");
     correctColor('#7ABB6C');
     submit.innerText="That is correct!";
-    }
-    // disable ALL the option buttons
-    optionA.disabled = true;
-    optionB.disabled = true;
-    optionC.disabled = true;
-    optionD.disabled = true;
+    // enable the submit button
+    submit.disabled = false;
+}
+// disable ALL the option buttons
+optionA.disabled = true;
+optionB.disabled = true;
+optionC.disabled = true;
+optionD.disabled = true;
 }
 
 // create function to check option B
@@ -84,6 +88,8 @@ function checkAnswerB() {
     console.log("That's correct!");
     correctColor('#7ABB6C');
     submit.innerText="That is correct!";
+    // enable the submit button
+    submit.disabled = false;
     }
     // disable ALL the option buttons
     optionA.disabled = true;
@@ -103,6 +109,8 @@ function checkAnswerC() {
         console.log("That's correct!");
         correctColor('#7ABB6C');
         submit.innerText="That is correct!";
+        // enable the submit button
+        submit.disabled = false;
     }
     // disable ALL the option buttons
     optionA.disabled = true;
@@ -122,6 +130,8 @@ function checkAnswerD() {
         console.log("That's correct!");
         correctColor('#7ABB6C');
         submit.innerText="That is correct!";
+        // enable the submit button
+        submit.disabled = false;
     }
     // disable ALL the option buttons
     optionA.disabled = true;
