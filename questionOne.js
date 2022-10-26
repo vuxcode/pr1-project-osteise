@@ -49,8 +49,10 @@ function questTwo() {
     optD = true;
 } 
 
+// disable submit button
+//submit.disabled = true;
 // control wich question will be asked
-questTwo();
+questOne();
 
 // create function to check option A
 function checkAnswerA() {
@@ -64,6 +66,11 @@ function checkAnswerA() {
     correctColor('#7ABB6C');
     submit.innerText="That is correct!";
     }
+    // disable ALL the option buttons
+    optionA.disabled = true;
+    optionB.disabled = true;
+    optionC.disabled = true;
+    optionD.disabled = true;
 }
 
 // create function to check option B
@@ -78,6 +85,11 @@ function checkAnswerB() {
     correctColor('#7ABB6C');
     submit.innerText="That is correct!";
     }
+    // disable ALL the option buttons
+    optionA.disabled = true;
+    optionB.disabled = true;
+    optionC.disabled = true;
+    optionD.disabled = true;
 }
 
 // create function to check option C
@@ -92,6 +104,11 @@ function checkAnswerC() {
         correctColor('#7ABB6C');
         submit.innerText="That is correct!";
     }
+    // disable ALL the option buttons
+    optionA.disabled = true;
+    optionB.disabled = true;
+    optionC.disabled = true;
+    optionD.disabled = true;
 }
 
 // create function to check option D
@@ -106,17 +123,25 @@ function checkAnswerD() {
         correctColor('#7ABB6C');
         submit.innerText="That is correct!";
     }
+    // disable ALL the option buttons
+    optionA.disabled = true;
+    optionB.disabled = true;
+    optionC.disabled = true;
+    optionD.disabled = true;
 }
 
 // create a function to change the submit button to red if the answer is wrong
 function wrongColor(newColorRed) {
+    // find the element that conrols the button style
     var changeWrongColor = document.getElementById("submit");
+    // update the background color of the button
     changeWrongColor.style.background = newColorRed;
-    changeWrongColor.innerHTML = newColorRed;
 }
 
+// create a function to change the submit button to green if the answer is correct
 function correctColor(newColorGreen) {
+    // find the element that controls the button style
     var changeCorrectColor = document.getElementById("submit");
+    // update the background color of the button
     changeCorrectColor.style.background = newColorGreen;
-    changeCorrectColor.innerHTML = newColorGreen;
 }
