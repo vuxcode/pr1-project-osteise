@@ -5,6 +5,9 @@ var optB = document.getElementById("optBInner");
 var optC = document.getElementById("optCInner");
 var optD = document.getElementById("optDInner");
 
+var submitButton = document.getElementById("submitInner");
+submitButton.innerText="Press the option you think is correct\n to submit your answer!";
+
 
 // create a function to output question number one
 function questOne() {
@@ -53,9 +56,13 @@ questTwo();
 function checkAnswerA() {
     if (optA == false) {
         console.log("That's incorrect..");
+        wrongColor('#AE2021');
+        submit.innerText="That is incorrect..";
     }
     else {
     console.log("That's correct!");
+    correctColor('#7ABB6C');
+    submit.innerText="That is correct!";
     }
 }
 
@@ -63,9 +70,13 @@ function checkAnswerA() {
 function checkAnswerB() {
     if (optB == false) {
         console.log("That's incorrect..");
+        wrongColor('#AE2021');
+        submit.innerText="That is incorrect.."
     }
     else {
     console.log("That's correct!");
+    correctColor('#7ABB6C');
+    submit.innerText="That is correct!";
     }
 }
 
@@ -73,9 +84,13 @@ function checkAnswerB() {
 function checkAnswerC() {
     if (optC == false) {
         console.log("That's incorrect..");
+        wrongColor('#AE2021');
+        submit.innerText="That is incorrect.."
     }
     else {
         console.log("That's correct!");
+        correctColor('#7ABB6C');
+        submit.innerText="That is correct!";
     }
 }
 
@@ -83,8 +98,25 @@ function checkAnswerC() {
 function checkAnswerD() {
     if (optD == false) {
         console.log("That's incorrect..");
+        wrongColor('#AE2012');
+        submit.innerText="That is incorrect..";
     }
     else {
         console.log("That's correct!");
+        correctColor('#7ABB6C');
+        submit.innerText="That is correct!";
     }
+}
+
+// create a function to change the submit button to red if the answer is wrong
+function wrongColor(newColorRed) {
+    var changeWrongColor = document.getElementById("submit");
+    changeWrongColor.style.background = newColorRed;
+    changeWrongColor.innerHTML = newColorRed;
+}
+
+function correctColor(newColorGreen) {
+    var changeCorrectColor = document.getElementById("submit");
+    changeCorrectColor.style.background = newColorGreen;
+    changeCorrectColor.innerHTML = newColorGreen;
 }
