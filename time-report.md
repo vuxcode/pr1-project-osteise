@@ -17,5 +17,5 @@ For example:
   - Added another question within question one, to see that it all works.
 -2022-10-27 15:00
   - Added color change to the option button if the answer is wrong.
-  - Added so that the correct option button turns green if the answer is wrong
+  - Added so that the correct option button turns green if the answer is wrong (used the same function to turn the option button green if the answer is correct.)
   - 

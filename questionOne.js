@@ -126,6 +126,8 @@ function checkAnswerA() {
     else {
     console.log("That's correct!");
     correctColor('#0F5132');
+    // use the function to turn the button green
+    ifWrongA('#0F5132');
     submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
     // enable the submit button
     submit.disabled = false;
@@ -156,6 +158,8 @@ function checkAnswerB() {
     console.log("That's correct!");
     // update the color of the submit button
     correctColor('#0F5132');
+    // use the function to turn the button green
+    ifWrongB('#0F5132');
     // change the text of the submit button
     submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
     // enable the submit button
@@ -180,6 +184,7 @@ function checkAnswerC() {
     else {
         console.log("That's correct!");
         correctColor('#0F5132');
+        ifWrongC('#0F5132');
         submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
         // enable the submit button
         submit.disabled = false;
@@ -203,6 +208,7 @@ function checkAnswerD() {
     else {
         console.log("That's correct!");
         correctColor('#0F5132');
+        ifWrongD('#0F5132');
         submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
         // enable the submit button
         submit.disabled = false;
