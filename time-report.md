@@ -18,4 +18,6 @@ For example:
 -2022-10-27 15:00
   - Added color change to the option button if the answer is wrong.
   - Added so that the correct option button turns green if the answer is wrong (used the same function to turn the option button green if the answer is correct.)
-  - 
+  - Created more questions, so now there are 10 different questions that gets chosen by random on question 1.
+  - Started with question 2 page
+  - Created questionTwo.js 
