@@ -115,6 +115,8 @@ function checkAnswerA() {
         console.log("That's incorrect..");
         // update color for the submit button
         wrongColor('#AE2021');
+        // update the color of the option button
+        wrongColorA('#AE2021');
         // change the text of the submit button
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
@@ -140,6 +142,8 @@ function checkAnswerB() {
         console.log("That's incorrect..");
         // update color for the submit button
         wrongColor('#AE2021');
+        // change color of the option button
+        wrongColorB('#AE2021');
         // change the text of the submit button
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
@@ -165,6 +169,7 @@ function checkAnswerC() {
     if (optC == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2021');
+        wrongColorC('#AE2021');
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
     else {
@@ -186,6 +191,7 @@ function checkAnswerD() {
     if (optD == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2012');
+        wrongColorD('#AE2021');
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
     else {
@@ -208,6 +214,38 @@ function wrongColor(newColorRed) {
     var changeWrongColor = document.getElementById("submit");
     // update the background color of the button
     changeWrongColor.style.background = newColorRed;
+}
+
+// create a function to switch the option button A to red if it's the wrong answer
+function wrongColorA(newColorRed) {
+    // find the element that controls option A
+    var changeWrongColorA = document.getElementById("optionA");
+    // update the background color of the button
+    changeWrongColorA.style.background = newColorRed;
+}
+
+// create a function to change the option button B color to red if it's the wrong answer
+function wrongColorB(newColorRed) {
+    // find the element that controls option B
+    var changeWrongColorB = document.getElementById('optionB');
+    // update the background color of the button
+    changeWrongColorB.style.background = newColorRed;
+}
+
+// create a function to change the option button C color to red if it's wrong
+function wrongColorC(newColorRed) {
+    // find the element that controls option C button
+    var changeWrongColorC = document.getElementById('optionC');
+    // update the background color of the button
+    changeWrongColorC.style.background = newColorRed;
+}
+
+// create a function to change the option button D color to red if it's wrong
+function wrongColorD(newColorRed) {
+    // find the element that controls option D button
+    var changeWrongColorD = document.getElementById('optionD');
+    // uptdate the background color of the element
+    changeWrongColorD.style.background = newColorRed;
 }
 
 // create a function to change the submit button to green if the answer is correct
