@@ -15,3 +15,7 @@ For example:
   - Made everything bigger
   - Fixed a random function picker function
   - Added another question within question one, to see that it all works.
+-2022-10-27 15:00
+  - Added color change to the option button if the answer is wrong.
+  - Added so that the correct option button turns green if the answer is wrong
+  - 

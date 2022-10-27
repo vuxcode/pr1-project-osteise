@@ -117,6 +117,8 @@ function checkAnswerA() {
         wrongColor('#AE2021');
         // update the color of the option button
         wrongColorA('#AE2021');
+        // turn the correct answer green
+        findAnswer();
         // change the text of the submit button
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
@@ -144,6 +146,8 @@ function checkAnswerB() {
         wrongColor('#AE2021');
         // change color of the option button
         wrongColorB('#AE2021');
+        // turn the correct answer green
+        findAnswer();
         // change the text of the submit button
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
@@ -170,6 +174,7 @@ function checkAnswerC() {
         console.log("That's incorrect..");
         wrongColor('#AE2021');
         wrongColorC('#AE2021');
+        findAnswer();
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
     else {
@@ -192,6 +197,7 @@ function checkAnswerD() {
         console.log("That's incorrect..");
         wrongColor('#AE2012');
         wrongColorD('#AE2021');
+        findAnswer();
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
     else {
@@ -254,4 +260,46 @@ function correctColor(newColorGreen) {
     var changeCorrectColor = document.getElementById("submit");
     // update the background color of the button
     changeCorrectColor.style.background = newColorGreen;
+}
+
+// create function to change the option A button green if the answer is wrong
+function ifWrongA(newColorGreen) {
+    // link to the element
+    var changeIfWrongA = document.getElementById('optionA');
+    // update the color
+    changeIfWrongA.style.background = newColorGreen;
+}
+
+// do the same thing with option B button
+function ifWrongB(newColorGreen) {
+    var changeIfWrongB = document.getElementById('optionB');
+    changeIfWrongB.style.background = newColorGreen;
+}
+
+// do the same thing with option C button
+function ifWrongC(newColorGreen) {
+    var changeIfWrongC = document.getElementById('optionC');
+    changeIfWrongC.style.background = newColorGreen;
+}
+
+// do the same thing with option D button
+function ifWrongD(newColorGreen) {
+    var changeIfWrongD = document.getElementById('optionD');
+    changeIfWrongD.style.background = newColorGreen;
+}
+
+// create a function to find what answer is correct and turn the button green if the answer is wrong
+function findAnswer() {
+    if (optA == true) {
+        ifWrongA('#0F5132');
+    }
+    else if (optB == true) {
+        ifWrongB('#0F5132');
+    }
+    else if (optC == true) {
+        ifWrongC('#0F5132');
+    }
+    else if (optD == true) {
+        ifWrongD('#0F5132');
+    }
 }
