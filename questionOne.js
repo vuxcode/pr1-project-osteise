@@ -157,10 +157,105 @@ function questSix() {
     correctOpt = opt1[3];
 }
 
+// create question number seven function
+function questSeven() {
+    // create the question output
+    var q1 = ("What song is not made by Bruce Springsteen?");
+    // output the text in the question field
+    question.innerText=q1;
+    // create the option outputs in an array
+    var opt1 = ["Dancing With Myself", "Dancing in the Dark", "Hungry Heart", "Born to Run"];
+    //output the array in the option buttons
+    optA.innerText=opt1[0];
+    optB.innerText=opt1[1];
+    optC.innerText=opt1[2];
+    optD.innerText=opt1[3];
+
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+
+    // update the correctOpt output to the correct answer
+    correctOpt = opt1[0];
+}
+
+// create question number eight function
+function questEight() {
+    // create the question output
+    var q1 = ("What song is not made by Elton John?");
+    // output the question
+    question.innerText=q1;
+    // create the option outputs in an array
+    var opt1 = ["Your Song", "Under Pressure", "I'm Still Standing", "Tiny Dancer"];
+    // output the array in the option buttons
+    optA.innerText=opt1[0];
+    optB.innerText=opt1[1];
+    optC.innerText=opt1[2];
+    optD.innerText=opt1[3];
+
+    // change the variable to true or false
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+
+    // update the correctOpt output to be the correct answer
+    correctOpt = opt1[1];
+}
+
+// create the question number nine function
+function questNine() {
+    // create the question output
+    var q1 = ("What song is not made by Lady Gaga?");
+    // output the question
+    question.innerText=q1;
+    // create the option outputs in an array
+    var opt1 = ["Bad Romance", "Alejandro", "The Edge of Glory", "Roar"];
+    //output the array in the option buttons
+    optA.innerText=opt1[0];
+    optB.innerText=opt1[1];
+    optC.innerText=opt1[2];
+    optD.innerText=opt1[3];
+
+    // change the variable to true or false
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+
+    // update the correctOpt output to be the correct answer
+    correctOpt = opt1[3];
+}
+
+function questTen() {
+    // create the question output
+    var q1 = ("What song is not made by Britney Spears?");
+    // output the question
+    question.innerText=q1;
+    // create the option outputs in an array
+    var opt1 = ["Gimme, Gimme, Gimme", "Toxic", "Oops!... I Did it Again", "... Baby One More Time"];
+    // output the array in the option boxes
+    optA.innerText=opt1[0];
+    optB.innerText=opt1[1];
+    optC.innerText=opt1[2];
+    optD.innerText=opt1[3];
+
+    // change the variables to true or false
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+
+    // update the correctOpt output to be the correct answer
+    correctOpt = opt1[0];
+}
+
 // create a random function generator to choose a random question
 function randomQuestion() {
     // create the random variable
-    var random = Math.floor(Math.random() * 6);
+    var random = Math.floor(Math.random() * 10);
     // put in the question functions
     switch(random) {
         case 0:
@@ -181,8 +276,20 @@ function randomQuestion() {
         case 5: 
             questSix();
             break;
-        }
-    }       
+        case 6:
+            questSeven();
+            break;
+        case 7: 
+            questEight();
+            break;
+        case 8: 
+            questNine();
+            break;
+            case 9:
+                questTen();
+                break;  
+        }     
+    }
 
 // run the random function generator
 randomQuestion();
