@@ -15,7 +15,7 @@ For example:
   - Made everything bigger
   - Fixed a random function picker function
   - Added another question within question one, to see that it all works.
--2022-10-27 15:00
+-2022-10-27 15:00 Worked for 3 hours.
   - Added color change to the option button if the answer is wrong.
   - Added so that the correct option button turns green if the answer is wrong (used the same function to turn the option button green if the answer is correct.)
   - Created more questions, so now there are 10 different questions that gets chosen by random on question 1.
