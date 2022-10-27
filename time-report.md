@@ -9,6 +9,9 @@ For example:
   - Designed the buttons
 - 2022-10-24 18:00 Worked for 1 hour.
   - Created elements to control what the different boxes will say
-- 2022-10-26 16:00 Worked for 3 hours.
-  - Fixed a submit button, and contolled when it's disabled and when it's enabled
+- 2022-10-26 16:00 Worked for 4 hours.
+  - Fixed a submit button, and controlled when it's disabled and when it's enabled
   - Fixed option buttons so that they are disabled when one is clicked. 
+  - Made everything bigger
+  - Fixed a random function picker function
+  - Added another question within question one, to see that it all works.

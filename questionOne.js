@@ -66,21 +66,40 @@ function questTwo() {
 // create question number three function
 function questThree() {
     // create the question output
-    var q1 = ("")
+    var q1 = ("What song is not made by Johnny Cash?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Jailhouse Rock", "Cry, Cry, Cry", "Big River", "Ring of Fire"];
+    optA.innerText=opt1[0];
+    optB.innerText=opt1[1];
+    optC.innerText=opt1[2];
+    optD.innerText=opt1[3];
+
+    // change the variable to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+
+    // update the correctOpt to output the correct answer in submit button
+    correctOpt = opt1[0];
 }
 
 // create a random function generator to choose a random question
 function randomQuestion() {
     // create the random variable
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     // put in the question functions
     switch(random) {
         case 0:
-            questOne();
-            break;
+                questOne();
+                break;
             case 1: 
-            questTwo();
-            break;
+                questTwo();
+                break;
+            case 2:
+                questThree();
+                break;
         }
     }
 
@@ -97,7 +116,7 @@ function checkAnswerA() {
         // update color for the submit button
         wrongColor('#AE2021');
         // change the text of the submit button
-        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'";
+        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
     // if the answer is correct
     else {
@@ -122,7 +141,7 @@ function checkAnswerB() {
         // update color for the submit button
         wrongColor('#AE2021');
         // change the text of the submit button
-        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'";
+        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
     else {
     // check it so that the button is working
@@ -146,7 +165,7 @@ function checkAnswerC() {
     if (optC == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2021');
-        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'";
+        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
     else {
         console.log("That's correct!");
@@ -167,7 +186,7 @@ function checkAnswerD() {
     if (optD == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2012');
-        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'";
+        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
     }
     else {
         console.log("That's correct!");
