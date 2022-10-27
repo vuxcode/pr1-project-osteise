@@ -5,10 +5,13 @@ var optB = document.getElementById("optBInner");
 var optC = document.getElementById("optCInner");
 var optD = document.getElementById("optDInner");
 
+// create variable to output the correct answer when a wrong answer is picked
+var correctOpt;
+
 // create the submit button element
 var submitButton = document.getElementById("submitInner");
 // create the default text to the submit button
-submitButton.innerText="Press the option you think is correct\n to submit your answer!";
+submitButton.innerText="Press the button that you think is the correct answer!";
 // disable submit button
 submit.disabled = true;
 
@@ -31,6 +34,9 @@ function questOne() {
     optB = false;
     optC = true;
     optD = false;
+
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
     
 } 
 
@@ -51,8 +57,17 @@ function questTwo() {
     optB = false;
     optC = false;
     optD = true;
+
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+
 } 
 
+// create question number three function
+function questThree() {
+    // create the question output
+    var q1 = ("")
+}
 
 // create a random function generator to choose a random question
 function randomQuestion() {
@@ -71,19 +86,24 @@ function randomQuestion() {
 
 // run the random function generator
 randomQuestion();
-    
+
 
 // create function to check option A
 function checkAnswerA() {
+    // if the answer is incorrect
     if (optA == false) {
+        // check it so that the button is working
         console.log("That's incorrect..");
+        // update color for the submit button
         wrongColor('#AE2021');
-        submitInner.innerText="That is incorrect..";
+        // change the text of the submit button
+        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'";
     }
+    // if the answer is correct
     else {
     console.log("That's correct!");
     correctColor('#0F5132');
-    submitInner.innerText="That is correct!\n Press this button to move to the next question!";
+    submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
     // enable the submit button
     submit.disabled = false;
     }
@@ -97,14 +117,20 @@ optionD.disabled = true;
 // create function to check option B
 function checkAnswerB() {
     if (optB == false) {
+        // check it so that the button is working
         console.log("That's incorrect..");
+        // update color for the submit button
         wrongColor('#AE2021');
-        submitInner.innerText="That is incorrect.."
+        // change the text of the submit button
+        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'";
     }
     else {
+    // check it so that the button is working
     console.log("That's correct!");
+    // update the color of the submit button
     correctColor('#0F5132');
-    submitInner.innerText="That is correct!\n Press this button to move to the next question!";
+    // change the text of the submit button
+    submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
     // enable the submit button
     submit.disabled = false;
     }
@@ -120,12 +146,12 @@ function checkAnswerC() {
     if (optC == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2021');
-        submitInner.innerText="That is incorrect..";
+        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'";
     }
     else {
         console.log("That's correct!");
         correctColor('#0F5132');
-        submitInner.innerText="That is correct!\n Press this button to move to the next question!";
+        submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
         // enable the submit button
         submit.disabled = false;
     }
@@ -141,12 +167,12 @@ function checkAnswerD() {
     if (optD == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2012');
-        submitInner.innerText="That is incorrect..";
+        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'";
     }
     else {
         console.log("That's correct!");
         correctColor('#0F5132');
-        submitInner.innerText="That is correct!\n Press this button to move to the next question!";
+        submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
         // enable the submit button
         submit.disabled = false;
     }
