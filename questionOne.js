@@ -85,23 +85,104 @@ function questThree() {
     correctOpt = opt1[0];
 }
 
+// create question number four function
+function questFour() {
+    // create the question output
+    var q1 = ("What song is not made by ABBA?");
+    //output it
+    question.innerText=q1;
+    // create the option output in an array
+    var opt1 = ["Don't Stop Me Now", "Dancing Queen", "The Winner Takes It All", "Lay All Your Love On Me"];
+    // output the array in the option boxes
+    optA.innerText=opt1[0];
+    optB.innerText=opt1[1];
+    optC.innerText=opt1[2];
+    optD.innerText=opt1[3];
+
+    // change the variable to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+
+    // update the correctOpt to output the correct answer in submit button
+    correctOpt = opt1[0];
+}
+
+// create question number five function
+function questFive() {
+    // create the question output
+    var q1 = ("What song is not made by Bob Marley?");
+    // output it in the question field
+    question.innerText=q1;
+    // create the option output in an array
+    var opt1 = ["Buffalo Soldier", "Is This Love", "Bad Boys", "No Woman, No Cry"];
+    // output the array in the option boxes
+    optA.innerText=opt1[0];
+    optB.innerText=opt1[1];
+    optC.innerText=opt1[2];
+    optD.innerText=opt1[3];
+
+    // change the variable to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+
+    // update the correctOpt to output the correct answer in submit button
+    correctOpt = opt1[2];
+}
+
+// create question number six function
+function questSix() {
+    // create the question output
+    var q1 = ("What song is not made by AC/DC?");
+    // output it in the question box
+    question.innerText=q1;
+    // create the option output in an array
+    var opt1 = ["Hells Bells", "Dirty Deeds Done Dirt Cheap", "Highway to Hell", "Any Way You Want It"];
+    // output the array in the option boxes
+    optA.innerText=opt1[0];
+    optB.innerText=opt1[1];
+    optC.innerText=opt1[2];
+    optD.innerText=opt1[3];
+
+    // change the variable to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+
+    // update the correctOpt to output the correct answer if wrong answer is selected
+    correctOpt = opt1[3];
+}
+
 // create a random function generator to choose a random question
 function randomQuestion() {
     // create the random variable
-    var random = Math.floor(Math.random() * 3);
+    var random = Math.floor(Math.random() * 6);
     // put in the question functions
     switch(random) {
         case 0:
-                questOne();
-                break;
-            case 1: 
-                questTwo();
-                break;
-            case 2:
-                questThree();
-                break;
+            questOne();
+            break;
+        case 1: 
+            questTwo();
+            break;
+        case 2:
+            questThree();
+            break;
+        case 3:
+            questFour();
+            break;
+        case 4:
+            questFive();
+            break;
+        case 5: 
+            questSix();
+            break;
         }
-    }
+    }       
 
 // run the random function generator
 randomQuestion();
@@ -296,16 +377,24 @@ function ifWrongD(newColorGreen) {
 
 // create a function to find what answer is correct and turn the button green if the answer is wrong
 function findAnswer() {
+    // if option A is correct
     if (optA == true) {
+        // run the function that turns option A button green
         ifWrongA('#0F5132');
     }
+    // if option B is correct
     else if (optB == true) {
+        // run the function that turns option B button green
         ifWrongB('#0F5132');
     }
+    // if option C is correct
     else if (optC == true) {
+        // run the function that turns option C button green
         ifWrongC('#0F5132');
     }
+    // if option D is correct
     else if (optD == true) {
+        // run the function that turns option D button green
         ifWrongD('#0F5132');
     }
 }
