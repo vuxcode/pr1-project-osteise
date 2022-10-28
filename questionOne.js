@@ -4,7 +4,7 @@ const onConfirmRefresh = function (event) {
     return event.returnValue = "Are you sure you want to leave page?";
 }
 */
-window.addEventListener("beforeunload", onConfirmRefresh, { capture: true });
+//window.addEventListener("beforeunload", onConfirmRefresh, { capture: true });
 
 // create variables and add the buttons
 var question = document.getElementById("qOneInner");
