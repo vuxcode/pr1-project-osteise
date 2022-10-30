@@ -16,6 +16,13 @@ var optD = document.getElementById("optDInner");
 // create variable to output the correct answer when a wrong answer is picked
 var correctOpt;
 
+// create variables to set to true once that question has been called
+var callQuestOne;
+var callQuestTwo;
+var callQuestThree;
+
+var wrongAnswer;
+
 // create the submit button element
 var submitButton = document.getElementById("submitInner");
 // create the default text to the submit button
@@ -23,6 +30,11 @@ submitButton.innerText="Press the button that you think is the correct answer!";
 // disable submit button
 submit.disabled = true;
 
+/*
+var levelNumber = document.getElementById("level");
+*/
+var levelNumber = ("Question 1");
+level.innerText=levelNumber;
 
 // create a function to output question number one
 function questOne() {
@@ -265,6 +277,7 @@ function randomQuestion() {
     // create the random variable
     var random = Math.floor(Math.random() * 10);
     // put in the question functions
+    callQuestOne = true;
     switch(random) {
         case 0:
             questOne();
@@ -317,6 +330,7 @@ function checkAnswerA() {
         findAnswer();
         // change the text of the submit button
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
+        submit.disabled = false;
     }
     // if the answer is correct
     else {
@@ -327,7 +341,7 @@ function checkAnswerA() {
     submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
     // enable the submit button
     submit.disabled = false;
-    }
+}
 // disable ALL the option buttons
 optionA.disabled = true;
 optionB.disabled = true;
@@ -348,6 +362,7 @@ function checkAnswerB() {
         findAnswer();
         // change the text of the submit button
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
+        submit.disabled = false;
     }
     else {
     // check it so that the button is working
@@ -376,6 +391,7 @@ function checkAnswerC() {
         wrongColorC('#AE2021');
         findAnswer();
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
+        submit.disabled = false;
     }
     else {
         console.log("That's correct!");
@@ -400,6 +416,7 @@ function checkAnswerD() {
         wrongColorD('#AE2021');
         findAnswer();
         submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
+        submit.disabled = false;
     }
     else {
         console.log("That's correct!");
@@ -470,24 +487,28 @@ function ifWrongA(newColorGreen) {
     var changeIfWrongA = document.getElementById('optionA');
     // update the color
     changeIfWrongA.style.background = newColorGreen;
+    wrongAnswer = true;
 }
 
 // do the same thing with option B button
 function ifWrongB(newColorGreen) {
     var changeIfWrongB = document.getElementById('optionB');
     changeIfWrongB.style.background = newColorGreen;
+    wrongAnswer = true;
 }
 
 // do the same thing with option C button
 function ifWrongC(newColorGreen) {
     var changeIfWrongC = document.getElementById('optionC');
     changeIfWrongC.style.background = newColorGreen;
+    wrongAnswer = true;
 }
 
 // do the same thing with option D button
 function ifWrongD(newColorGreen) {
     var changeIfWrongD = document.getElementById('optionD');
     changeIfWrongD.style.background = newColorGreen;
+    wrongAnswer = true;
 }
 
 // create a function to find what answer is correct and turn the button green if the answer is wrong
@@ -511,5 +532,212 @@ function findAnswer() {
     else if (optD == true) {
         // run the function that turns option D button green
         ifWrongD('#0F5132');
+    }
+}
+
+/*
+*/
+
+// create a function to reset the colors on the buttons between questions
+function resetColors() {
+    // find the element
+    var oldColorA = document.getElementById('optionA');
+    // set the color
+    oldColorA.style.background = '#023E8A';
+    // repeat for all the buttons
+    var oldColorB = document.getElementById('optionB');
+    oldColorB.style.background = '#023E8A';
+    var oldColorC = document.getElementById('optionC');
+    oldColorC.style.background = '#023E8A';
+    var oldColorD = document.getElementById('optionD');
+    oldColorD.style.background = '#023E8A';
+    var oldColorSubmit = document.getElementById('submit');
+    oldColorSubmit.style.background = '#023E8A';
+    
+    // change back the text of the submit button
+    submitInner.innerText="Press the button that you think is the correct answer!";
+    // disable the submit button
+    submit.disabled = true;
+
+    // enable the option buttons
+    optionA.disabled = false;
+    optionB.disabled = false;
+    optionC.disabled = false;
+    optionD.disabled = false;
+    
+}
+
+
+
+
+
+// QUESTION NUMBER TWO
+
+function questOneTwo() {
+    // create the question output
+    var q1 = ("Where are the members of AC/DC from?");
+    question.innerText=q1;
+
+    // create the option outputs
+    var opt1 = ["England", "Ireland", "America", "Australia"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+
+    callQuestTwo = true;
+}
+
+
+function randomQuestionTwo() {    
+    // change the level number to 2
+    var levelNumber = ("Question 2");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 2
+    var random = Math.floor(Math.random() * 1);
+    callQuestTwo = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneTwo();
+            break;
+    }
+}
+
+
+
+
+
+
+
+
+// QUESTION NUMBER THREE
+
+
+function questOneThree() {
+    // create the question output
+    var q1 = ("HEJ");
+    question.innerText=q1;
+    
+    // create the option outputs
+    var opt1 = ["Rätt", "Fel", "Fel", "Fel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+}
+
+// create random question generator for question three
+
+function randomQuestionThree() {    
+    // change the level number to 3
+    var levelNumber = ("Question 3");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 3
+    var random = Math.floor(Math.random() * 1);
+    callQuestThree = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneThree();
+            break;
+    }
+}
+
+
+
+
+// QUESTION FOUR
+
+function questOneFour() {
+    // create the question output
+    var q1 = ("FRÅGA");
+    question.innerText=q1;
+    
+    // create the option outputs
+    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+
+// create random question generator for question four
+
+function randomQuestionFour() {    
+    // change the level number to 3
+    var levelNumber = ("Question 4");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 3
+    var random = Math.floor(Math.random() * 1);
+    callQuestFour = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneFour();
+            break;
+    }
+}
+
+
+
+
+function callNextQuestion() {
+    if (wrongAnswer = true) {
+
+    }
+    else if (callQuestOne == true) {
+        console.log("question 2");
+        resetColors();
+        randomQuestionTwo();
+        callQuestOne = false;
+    }
+    else if (callQuestTwo == true) {
+        resetColors();
+        randomQuestionThree();
+        callQuestTwo = false;
+    }
+    else if (callQuestThree == true) {
+        resetColors();
+        randomQuestionFour();
     }
 }

@@ -21,3 +21,7 @@ For example:
   - Created more questions, so now there are 10 different questions that gets chosen by random on question 1.
   - Started with question 2 page
   - Created questionTwo.js 
+-2022-10-30 19:00
+  - Started working with how to keep all the questions on one "page".
+  - Created an element so the question level number changes when the next question is loaded
+  - Created a function with an if statement to run the next question

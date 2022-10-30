@@ -113,3 +113,8 @@ a:hover {
     background: #0077B8;
     color: #0096C7; 
     }
+#level {
+    color: #ADE8F4;
+    text-align: center;
+    font-size: 200%;
+}

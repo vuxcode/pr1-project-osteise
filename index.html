@@ -14,7 +14,7 @@
 </nav>
 <main>
     <section>
-        <h1>Question 1</h1><br>
+        <h1 id="level"></h1><br>
         <p id="qOneInner"></p><br>
         <button id="optionA" onClick="checkAnswerA()"><p id="optAInner"></p></button>
         <button id="optionB" onClick="checkAnswerB()"><p id="optBInner"></p></button><br>
@@ -22,7 +22,7 @@
         <button id="optionD" onClick="checkAnswerD()"><p id="optDInner"></p></button>
     </section>
     <article>
-        <button id="submit" onClick="window.location='questionTwoPage.html';"><p id=submitInner></p></button>
+        <button id="submit" onClick="callNextQuestion()"><p id=submitInner></p></button>
     </article>
 </main>
 <footer>
