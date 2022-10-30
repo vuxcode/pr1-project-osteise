@@ -309,7 +309,7 @@ function randomQuestion() {
         case 8: 
             questNine();
             break;
-            case 9:
+        case 9:
             questTen();
             break;  
         }     
@@ -610,8 +610,30 @@ function questOneTwo() {
     
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
+}
 
-    callQuestTwo = true;
+function questTwoTwo() {
+    // create the question output
+    var q1 = ("Where are the members of ABBA from?");
+    question.innerText=q1;
+
+    // create the option outputs
+    var opt1 = ["England", "Sweden", "Norway", "America"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
 }
 
 
@@ -621,13 +643,16 @@ function randomQuestionTwo() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 2
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 2);
     callQuestTwo = true;
 
     // put in the question functions
     switch(random) {
         case 0:
             questOneTwo();
+            break;
+        case 1:
+            questTwoTwo();
             break;
     }
 }
