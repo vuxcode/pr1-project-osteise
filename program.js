@@ -1,11 +1,3 @@
-/* trying to prevent the user from refreshing
-const onConfirmRefresh = function (event) {
-    event.preventDefault();
-    return event.returnValue = "Are you sure you want to leave page?";
-}
-*/
-//window.addEventListener("beforeunload", onConfirmRefresh, { capture: true });
-
 // create variables and add the buttons
 var question = document.getElementById("qOneInner");
 var optA = document.getElementById("optAInner");
@@ -21,6 +13,12 @@ var callQuestOne;
 var callQuestTwo;
 var callQuestThree;
 var callQuestFour;
+var callQuestFive;
+var callQuestSix;
+var callQuestSeven;
+var callQuestEight;
+var callQuestNine;
+var callQuestTen;
 
 // create a variable so the program knows it needs to reload when an answer is wrong
 var incorrect = false;
@@ -312,8 +310,8 @@ function randomQuestion() {
             questNine();
             break;
             case 9:
-                questTen();
-                break;  
+            questTen();
+            break;  
         }     
     }
 
@@ -716,14 +714,16 @@ function questOneFour() {
     correctOpt = opt1[1];
 }
 
+
+
 // create random question generator for question four
 
 function randomQuestionFour() {    
-    // change the level number to 3
+    // change the level number to 4
     var levelNumber = ("Question 4");
     // find the element
     level.innerText=levelNumber;
-    // create the randomizer for question 3
+    // create the randomizer for question 4
     var random = Math.floor(Math.random() * 1);
     callQuestFour = true;
 
@@ -734,6 +734,295 @@ function randomQuestionFour() {
             break;
     }
 }
+
+
+// QUESTION FIVE
+
+function questOneFive() {
+    // create the question output
+    var q1 = ("QUESTION");
+    question.innerText=q1;
+    
+    // create the option outputs
+    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+
+// create random question generator for question five
+
+function randomQuestionFive() {    
+    // change the level number to 5
+    var levelNumber = ("Question 5");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 5
+    var random = Math.floor(Math.random() * 1);
+    callQuestFive = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneFive();
+            break;
+    }
+}
+
+
+
+// QUESTION SIX
+
+function questOneSix() {
+    // create the question output
+    var q1 = ("FRÅGA");
+    question.innerText=q1;
+    
+    // create the option outputs
+    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+
+// create random question generator for question six
+
+function randomQuestionSix() {    
+    // change the level number to 6
+    var levelNumber = ("Question 6");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 6
+    var random = Math.floor(Math.random() * 1);
+    callQuestSix = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneSix();
+            break;
+    }
+}
+
+
+
+// QUESTION SEVEN
+
+function questOneSeven() {
+    // create the question output
+    var q1 = ("FRÅGA");
+    question.innerText=q1;
+    
+    // create the option outputs
+    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+
+// create random question generator for question four
+
+function randomQuestionSeven() {    
+    // change the level number to 7
+    var levelNumber = ("Question 7");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 7
+    var random = Math.floor(Math.random() * 1);
+    callQuestSeven = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneSeven();
+            break;
+    }
+}
+
+
+
+
+// QUESTION EIGHT
+
+function questOneEight() {
+    // create the question output
+    var q1 = ("FRÅGA");
+    question.innerText=q1;
+    
+    // create the option outputs
+    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+
+// create random question generator for question 8
+
+function randomQuestionEight() {    
+    // change the level number to 8
+    var levelNumber = ("Question 8");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 8
+    var random = Math.floor(Math.random() * 1);
+    callQuestEight = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneEight();
+            break;
+    }
+}
+
+
+
+
+
+
+// QUESTION NINE
+
+function questOneNine() {
+    // create the question output
+    var q1 = ("FRÅGA");
+    question.innerText=q1;
+    
+    // create the option outputs
+    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+
+// create random question generator for question 9
+
+function randomQuestionNine() {    
+    // change the level number to 9
+    var levelNumber = ("Question 9");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 9
+    var random = Math.floor(Math.random() * 1);
+    callQuestNine = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneNine();
+            break;
+    }
+}
+
+
+// QUESTION TEN
+
+function questOneTen() {
+    // create the question output
+    var q1 = ("FRÅGA");
+    question.innerText=q1;
+    
+    // create the option outputs
+    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+
+// create random question generator for question ten
+
+function randomQuestionTen() {    
+    // change the level number to 10
+    var levelNumber = ("Question 10");
+    // find the element
+    level.innerText=levelNumber;
+    // create the randomizer for question 10
+    var random = Math.floor(Math.random() * 1);
+    callQuestTen = true;
+
+    // put in the question functions
+    switch(random) {
+        case 0:
+            questOneTen();
+            break;
+    }
+}
+
+
+
+
+
 
 
 // create a function to reload the program if the answer is wrong
@@ -758,5 +1047,36 @@ function callNextQuestion() {
     else if (callQuestThree == true) {
         resetColors();
         randomQuestionFour();
+        callQuestThree = false;
+    }
+    else if (callQuestFour == true) {
+        resetColors();
+        randomQuestionFive();
+        callQuestFour = false;
+    }
+    else if (callQuestFive == true) {
+        resetColors();
+        randomQuestionSix();
+        callQuestFive = false;
+    }
+    else if (callQuestSix == true) {
+        resetColors();
+        randomQuestionSeven();
+        callQuestSix = false;
+    }
+    else if (callQuestSeven == true) {
+        resetColors();
+        randomQuestionEight();
+        callQuestSeven = false;
+    }
+    else if (callQuestEight == true) {
+        resetColors();
+        randomQuestionNine();
+        callQuestEight = false;
+    }
+    else if (callQuestNine == true) {
+        resetColors();
+        randomQuestionTen();
+        callQuestNine = false;
     }
 }
