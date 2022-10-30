@@ -20,8 +20,13 @@ var correctOpt;
 var callQuestOne;
 var callQuestTwo;
 var callQuestThree;
+var callQuestFour;
 
-var wrongAnswer;
+// create a variable so the program knows it needs to reload when an answer is wrong
+var incorrect = false;
+
+// create a variable to keep track of the score
+var score = 0;
 
 // create the submit button element
 var submitButton = document.getElementById("submitInner");
@@ -30,10 +35,9 @@ submitButton.innerText="Press the button that you think is the correct answer!";
 // disable submit button
 submit.disabled = true;
 
-/*
-var levelNumber = document.getElementById("level");
-*/
+// create a variable to be able to update the level counter
 var levelNumber = ("Question 1");
+// target the element
 level.innerText=levelNumber;
 
 // create a function to output question number one
@@ -276,8 +280,9 @@ function questTen() {
 function randomQuestion() {
     // create the random variable
     var random = Math.floor(Math.random() * 10);
-    // put in the question functions
+    // set callquestone to true so the program will know that it has been used
     callQuestOne = true;
+    // put in the question functions
     switch(random) {
         case 0:
             questOne();
@@ -329,8 +334,10 @@ function checkAnswerA() {
         // turn the correct answer green
         findAnswer();
         // change the text of the submit button
-        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
+        submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
+        // set incorrect to true, so the program knows it needs to end
+        incorrect = true;
     }
     // if the answer is correct
     else {
@@ -341,6 +348,8 @@ function checkAnswerA() {
     submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
     // enable the submit button
     submit.disabled = false;
+    // update the score
+    score++;
 }
 // disable ALL the option buttons
 optionA.disabled = true;
@@ -361,8 +370,10 @@ function checkAnswerB() {
         // turn the correct answer green
         findAnswer();
         // change the text of the submit button
-        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
+        submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
+        // set incorrect to true, so the program knows it needs to end
+        incorrect = true;
     }
     else {
     // check it so that the button is working
@@ -375,6 +386,8 @@ function checkAnswerB() {
     submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
     // enable the submit button
     submit.disabled = false;
+    // update the score
+    score++;
     }
     // disable ALL the option buttons
     optionA.disabled = true;
@@ -390,8 +403,10 @@ function checkAnswerC() {
         wrongColor('#AE2021');
         wrongColorC('#AE2021');
         findAnswer();
-        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
+        submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
+        // set incorrect to true, so the program knows it needs to end
+        incorrect = true;
     }
     else {
         console.log("That's correct!");
@@ -400,6 +415,8 @@ function checkAnswerC() {
         submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
         // enable the submit button
         submit.disabled = false;
+        // update the score
+        score++;
     }
     // disable ALL the option buttons
     optionA.disabled = true;
@@ -415,8 +432,10 @@ function checkAnswerD() {
         wrongColor('#AE2012');
         wrongColorD('#AE2021');
         findAnswer();
-        submitInner.innerText="That is incorrect..\nThe correct answer is " +  "'" + correctOpt + "'..";
+        submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
+        // set incorrect to true, so the program knows it needs to end
+        incorrect = true;
     }
     else {
         console.log("That's correct!");
@@ -425,6 +444,8 @@ function checkAnswerD() {
         submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
         // enable the submit button
         submit.disabled = false;
+        // update the score
+        score++;
     }
     // disable ALL the option buttons
     optionA.disabled = true;
@@ -487,28 +508,24 @@ function ifWrongA(newColorGreen) {
     var changeIfWrongA = document.getElementById('optionA');
     // update the color
     changeIfWrongA.style.background = newColorGreen;
-    wrongAnswer = true;
 }
 
 // do the same thing with option B button
 function ifWrongB(newColorGreen) {
     var changeIfWrongB = document.getElementById('optionB');
     changeIfWrongB.style.background = newColorGreen;
-    wrongAnswer = true;
 }
 
 // do the same thing with option C button
 function ifWrongC(newColorGreen) {
     var changeIfWrongC = document.getElementById('optionC');
     changeIfWrongC.style.background = newColorGreen;
-    wrongAnswer = true;
 }
 
 // do the same thing with option D button
 function ifWrongD(newColorGreen) {
     var changeIfWrongD = document.getElementById('optionD');
     changeIfWrongD.style.background = newColorGreen;
-    wrongAnswer = true;
 }
 
 // create a function to find what answer is correct and turn the button green if the answer is wrong
@@ -719,14 +736,16 @@ function randomQuestionFour() {
 }
 
 
-
+// create a function to reload the program if the answer is wrong
+function reloadProgram() {
+    document.location.reload();
+}
 
 function callNextQuestion() {
-    if (wrongAnswer = true) {
-
+    if (incorrect) {
+        reloadProgram();
     }
     else if (callQuestOne == true) {
-        console.log("question 2");
         resetColors();
         randomQuestionTwo();
         callQuestOne = false;
