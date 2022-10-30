@@ -21,7 +21,11 @@ For example:
   - Created more questions, so now there are 10 different questions that gets chosen by random on question 1.
   - Started with question 2 page
   - Created questionTwo.js 
--2022-10-30 19:00
+-2022-10-30 19:00 worked for 3 hours. 
   - Started working with how to keep all the questions on one "page".
   - Created an element so the question level number changes when the next question is loaded
   - Created a function with an if statement to run the next question
+  - Created a variable that keeps track of the score
+  - Created the structure of all the questions, so that all 10 loads on the same page.
+  - Created random question generator for all questions
+  - Started creating other questions for question number two

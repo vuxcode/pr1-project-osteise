@@ -636,6 +636,54 @@ function questTwoTwo() {
     correctOpt = opt1[1];
 }
 
+function questThreeTwo() {
+    // create the question output
+    var q1 = ("What country was Michael Jackson born in?");
+    question.innerText=q1;
+
+    // create the option outputs
+    var opt1 = ["America", "South Africa", "England", "Canada"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+}
+
+function questFourTwo() {
+    // create the question output
+    var q1 = ("In what country was Elton John born in?");
+    question.innerText=q1;
+
+    // create the option outputs
+    var opt1 = ["Germany", "Scotland", "Canada", "England"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    
+    
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+}
+
 
 function randomQuestionTwo() {    
     // change the level number to 2
@@ -643,7 +691,7 @@ function randomQuestionTwo() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 2
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 4);
     callQuestTwo = true;
 
     // put in the question functions
@@ -654,6 +702,13 @@ function randomQuestionTwo() {
         case 1:
             questTwoTwo();
             break;
+        case 2: 
+            questThreeTwo();
+            break;
+        case 3:
+            questFourTwo();
+            break;
+        
     }
 }
 

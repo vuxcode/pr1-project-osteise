@@ -5,4 +5,5 @@
 1. *SOLVED* How can I output the correct answer in the submit box when the answer is incorrect..
 2. *SOLVED* How do I prevent the user from refreshing (on any question) to get a new question?
 3. *SOLVED* Can I create a .js that is shared with all the question pages? So that I can update variables depending on how many questions the user guesses correct on. 
-4. How do I make the submit button run the next question?
+4. *SOLVED* How do I make the submit button run the next question?
+5. How do I replace the question box with a game over box when the user loses? Do I want to change what I have now?
