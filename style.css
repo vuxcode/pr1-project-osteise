@@ -64,12 +64,12 @@ h1 {
     margin-top: 10px;
     margin-left: 5px;
     }
-#optionA:hover,
-#optionB:hover,
-#optionC:hover,
-#optionD:hover {
+/* #optionA:hover:enabled,
+#optionB:hover:enabled,
+#optionC:hover:enabled,
+#optionD:hover:not([disabled]) {
     background: #0077B8;
-    }
+    } */
 #qOneInner {
     margin-top: 10px;
     margin-bottom: 30px;

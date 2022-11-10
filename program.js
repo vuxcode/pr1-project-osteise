@@ -5,6 +5,39 @@ var optB = document.getElementById("optBInner");
 var optC = document.getElementById("optCInner");
 var optD = document.getElementById("optDInner");
 
+// find the optionbutton A element to add event listener to change the color when mouseover
+document.getElementById("optionA").addEventListener("mouseover", function() {
+    document.getElementById("optionA").style.backgroundColor = "#0077B8";
+});
+// find the optionbutton element to add eventlistener to change the color back when mouseout
+document.getElementById("optionA").addEventListener("mouseout", function() {
+    document.getElementById("optionA").style.backgroundColor = "#023E8A";
+});
+// do the same thing with the other buttons!
+// optionbutton B
+document.getElementById("optionB").addEventListener("mouseover", function() {
+    document.getElementById("optionB").style.backgroundColor = "#0077B8";
+});
+document.getElementById("optionB").addEventListener("mouseout", function() {
+    document.getElementById("optionB").style.backgroundColor = "#023E8A";
+});
+// optionButton C
+document.getElementById("optionC").addEventListener("mouseover", function() {
+    document.getElementById("optionC").style.backgroundColor = "#0077B8";
+});
+document.getElementById("optionC").addEventListener("mouseout", function() {
+    document.getElementById("optionC").style.backgroundColor = "#023E8A";
+});
+// optionButton D
+document.getElementById("optionD").addEventListener("mouseover", function() {
+    document.getElementById("optionD").style.backgroundColor = "#0077B8";
+});
+document.getElementById("optionD").addEventListener("mouseout", function() {
+    document.getElementById("optionD").style.backgroundColor = "#023E8A";
+});
+
+
+
 // create variable to output the correct answer when a wrong answer is picked
 var correctOpt;
 
@@ -349,11 +382,12 @@ function checkAnswerA() {
     // update the score
     score++;
 }
-// disable ALL the option buttons
-optionA.disabled = true;
-optionB.disabled = true;
-optionC.disabled = true;
-optionD.disabled = true;
+    // disable ALL the option buttons
+    optionA.disabled = true;
+    optionB.disabled = true;
+    optionC.disabled = true;
+    optionD.disabled = true;
+
 }
 
 // create function to check option B
@@ -392,6 +426,7 @@ function checkAnswerB() {
     optionB.disabled = true;
     optionC.disabled = true;
     optionD.disabled = true;
+
 }
 
 // create function to check option C
@@ -421,6 +456,7 @@ function checkAnswerC() {
     optionB.disabled = true;
     optionC.disabled = true;
     optionD.disabled = true;
+
 }
 
 // create function to check option D
@@ -450,6 +486,7 @@ function checkAnswerD() {
     optionB.disabled = true;
     optionC.disabled = true;
     optionD.disabled = true;
+
 }
 
 // create a function to change the submit button to red if the answer is wrong
@@ -581,9 +618,6 @@ function resetColors() {
     optionD.disabled = false;
     
 }
-
-
-
 
 
 // QUESTION NUMBER TWO
@@ -1098,9 +1132,6 @@ function randomQuestionTen() {
             break;
     }
 }
-
-
-
 
 
 
