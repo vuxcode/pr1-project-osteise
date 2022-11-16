@@ -38,4 +38,4 @@ For example:
   - Switched from linking font to importing it
   - Started a "Your Session Stats" page, to display scores from local storage
   - Added a "total" score stat, that displays the number of correct answers in total this serssion.
-  - 
+  - Continued to work with storing highscores (see number 8 in bug-list).

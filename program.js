@@ -80,12 +80,13 @@ getScore();
 
 // create an array to store the highscores
 var highscore = [];
+
 // create a function to push the score into the array
 function pushScore() {
     // push the score value into the highscore array
-    highscore.push(score);
+    highscore = score;
     // save it to the local storage
-    localStorage.setItem("saved_score", highscore);
+    localStorage.setItem("saved_score", JSON.stringify(highscore));
     // check it 
     console.log(highscore);
 }
@@ -97,7 +98,7 @@ function getHighscore() {
     console.log(highscore);
 }
 // load the highscore when the program loads
-// getHighscore();
+getHighscore();
 
 // create the submit button element
 var submitButton = document.getElementById("submitInner");
