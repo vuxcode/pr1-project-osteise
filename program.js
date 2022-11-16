@@ -36,8 +36,6 @@ document.getElementById("optionD").addEventListener("mouseout", function() {
     document.getElementById("optionD").style.backgroundColor = "#023E8A";
 });
 
-
-
 // create variable to output the correct answer when a wrong answer is picked
 var correctOpt;
 
@@ -59,8 +57,47 @@ var incorrect = false;
 // create a variable to keep track of the score
 var score = 0;
 
-// create a variable to store the highscore
-var highscore;
+// track the total session score in a variable
+var total;
+// create a function to add the score by one
+function plusTotal() {
+    // increase the score by one
+    total++;
+    // save the total score to local storage
+    localStorage.setItem("saved_total", total);
+    // check the current total score
+    console.log(total);
+}
+// create function to get the saved total score
+function getScore() {
+    // get the score from the local storage
+    total = localStorage.getItem("saved_total");
+    // display the current total score
+    console.log(total);
+}
+// run the function when the program starts
+getScore();
+
+// create an array to store the highscores
+var highscore = [];
+// create a function to push the score into the array
+function pushScore() {
+    // push the score value into the highscore array
+    highscore.push(score);
+    // save it to the local storage
+    localStorage.setItem("saved_score", highscore);
+    // check it 
+    console.log(highscore);
+}
+// create a function to get the highscore
+function getHighscore() {
+    // get the highscore from the local storage
+    highscore = localStorage.getItem("saved_score");
+    // display the current score
+    console.log(highscore);
+}
+// load the highscore when the program loads
+// getHighscore();
 
 // create the submit button element
 var submitButton = document.getElementById("submitInner");
@@ -73,26 +110,6 @@ submit.disabled = true;
 var levelNumber = ("Question 1");
 // target the element
 level.innerText=levelNumber;
-
-// create a function to run after each question to increase the highscore
-function highscoreAdd() {
-    // increase the score by one
-    highscore++;
-    // save the score to local storage
-    localStorage.setItem("saved_score", highscore);
-    // check the current score
-    console.log(highscore);
-}
-// create function to get the saved highscore
-function getHighscore() {
-    // get the higscore from the local storage
-    highscore = localStorage.getItem("saved_score");
-    // display the currect score
-    console.log(highscore);
-}
-// load the score when the program loads
-getHighscore(); 
-
 
 // create a function to output question number one
 function questOne() {
@@ -387,6 +404,8 @@ function checkAnswerA() {
         wrongColorA('#AE2021');
         // turn the correct answer green
         findAnswer();
+        // push the score in to the highscore array
+        pushScore();
         // change the text of the submit button
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
@@ -424,6 +443,8 @@ function checkAnswerB() {
         wrongColorB('#AE2021');
         // turn the correct answer green
         findAnswer();
+        // push the score in to the highscore array
+        pushScore();
         // change the text of the submit button
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
@@ -459,6 +480,8 @@ function checkAnswerC() {
         wrongColor('#AE2021');
         wrongColorC('#AE2021');
         findAnswer();
+        // push the score in to the highscore array
+        pushScore();
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
         // set incorrect to true, so the program knows it needs to end
@@ -489,6 +512,8 @@ function checkAnswerD() {
         wrongColor('#AE2012');
         wrongColorD('#AE2021');
         findAnswer();
+        // push the score in to the highscore array
+        pushScore();
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
         // set incorrect to true, so the program knows it needs to end
@@ -1167,59 +1192,60 @@ function reloadProgram() {
 function callNextQuestion() {
     if (incorrect) {
         reloadProgram();
+        plusTotal();
     }
     else if (callQuestOne == true) {
         resetColors();
         randomQuestionTwo();
         callQuestOne = false;
-        highscoreAdd();
+        plusTotal();
     }
     else if (callQuestTwo == true) {
         resetColors();
         randomQuestionThree();
         callQuestTwo = false;
-        highscoreAdd();
+        plusTotal();
     }
     else if (callQuestThree == true) {
         resetColors();
         randomQuestionFour();
         callQuestThree = false;
-        highscoreAdd();
+        plusTotal();
     }
     else if (callQuestFour == true) {
         resetColors();
         randomQuestionFive();
         callQuestFour = false;
-        highscoreAdd();
+        plusTotal();
     }
     else if (callQuestFive == true) {
         resetColors();
         randomQuestionSix();
         callQuestFive = false;
-        highscoreAdd();
+        plusTotal();
     }
     else if (callQuestSix == true) {
         resetColors();
         randomQuestionSeven();
         callQuestSix = false;
-        highscoreAdd();
+        plusTotal();
     }
     else if (callQuestSeven == true) {
         resetColors();
         randomQuestionEight();
         callQuestSeven = false;
-        highscoreAdd();
+        plusTotal();
     }
     else if (callQuestEight == true) {
         resetColors();
         randomQuestionNine();
         callQuestEight = false;
-        highscoreAdd();
+        plusTotal();
     }
     else if (callQuestNine == true) {
         resetColors();
         randomQuestionTen();
         callQuestNine = false;
-        highscoreAdd();
+        plusTotal();
     }
 }

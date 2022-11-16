@@ -8,3 +8,4 @@
 4. *SOLVED* How do I make the submit button run the next question?
 5. How do I replace the question box with a game over box when the user loses? Do I want to change what I have now?
 6. *SOLVED* The options buttons doesn't hover past question 1. Maybe it's because I disable and enable them after the first option is used? (Can I fix it with adding eventlistener to hover?) (solved by controlling the mouseover and mouseout with javascript eventlisteners.)
+7. Highscore doesn't work as I want, it keeps on adding 1 every time I answer a question, even if I lost. I am thinking about making a "Session Stats" page, and use this variable to store number of "total correct questions", and maybe the three highest scores (perhaps with time counts). 

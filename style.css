@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -81,7 +82,8 @@ h1 {
 #optDInner {
     font-size: 150%;
 }
-#submit {
+#submit,
+#startGame {
     /*background-image: linear-gradient(to right, #023E8A , #0077B8);*/
     background: #023E8A;
     margin-left: auto;
@@ -99,11 +101,20 @@ h1 {
 a:hover {
     background: #0077B8;
     color: #0096C7; 
-    }
+}
 #level {
     color: #ADE8F4;
     text-align: center;
     font-size: 200%;
+}
+
+/* SESSION STAT PAGE */
+.playStat {
+    font-size: 200%;
+}
+#startGame:hover {
+    background: #0077B8;
+    color: #0096C7;
 }
 
 
