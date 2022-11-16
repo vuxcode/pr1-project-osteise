@@ -32,3 +32,5 @@ For example:
 -2022-11-09 22:00 worked for 2 hours.
   - Tried a lot of different things to fix my problem with the buttons not hovering after I disable and enable them. I solved it by controlling mouseover and mouseout with javascript addEventListeners.
   - Spent some time reading up on different addEventListeners.  
+-2022-11-16 10:30 
+  - 

@@ -59,6 +59,9 @@ var incorrect = false;
 // create a variable to keep track of the score
 var score = 0;
 
+// create a variable to store the highscore
+var highscore;
+
 // create the submit button element
 var submitButton = document.getElementById("submitInner");
 // create the default text to the submit button
@@ -70,6 +73,26 @@ submit.disabled = true;
 var levelNumber = ("Question 1");
 // target the element
 level.innerText=levelNumber;
+
+// create a function to run after each question to increase the highscore
+function highscoreAdd() {
+    // increase the score by one
+    highscore++;
+    // save the score to local storage
+    localStorage.setItem("saved_score", highscore);
+    // check the current score
+    console.log(highscore);
+}
+// create function to get the saved highscore
+function getHighscore() {
+    // get the higscore from the local storage
+    highscore = localStorage.getItem("saved_score");
+    // display the currect score
+    console.log(highscore);
+}
+// load the score when the program loads
+getHighscore(); 
+
 
 // create a function to output question number one
 function questOne() {
@@ -348,7 +371,7 @@ function randomQuestion() {
         }     
     }
 
-// run the random function generator
+// run the first random function generator when the program loads
 randomQuestion();
 
 
@@ -1149,45 +1172,54 @@ function callNextQuestion() {
         resetColors();
         randomQuestionTwo();
         callQuestOne = false;
+        highscoreAdd();
     }
     else if (callQuestTwo == true) {
         resetColors();
         randomQuestionThree();
         callQuestTwo = false;
+        highscoreAdd();
     }
     else if (callQuestThree == true) {
         resetColors();
         randomQuestionFour();
         callQuestThree = false;
+        highscoreAdd();
     }
     else if (callQuestFour == true) {
         resetColors();
         randomQuestionFive();
         callQuestFour = false;
+        highscoreAdd();
     }
     else if (callQuestFive == true) {
         resetColors();
         randomQuestionSix();
         callQuestFive = false;
+        highscoreAdd();
     }
     else if (callQuestSix == true) {
         resetColors();
         randomQuestionSeven();
         callQuestSix = false;
+        highscoreAdd();
     }
     else if (callQuestSeven == true) {
         resetColors();
         randomQuestionEight();
         callQuestSeven = false;
+        highscoreAdd();
     }
     else if (callQuestEight == true) {
         resetColors();
         randomQuestionNine();
         callQuestEight = false;
+        highscoreAdd();
     }
     else if (callQuestNine == true) {
         resetColors();
         randomQuestionTen();
         callQuestNine = false;
+        highscoreAdd();
     }
 }
