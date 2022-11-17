@@ -42,3 +42,4 @@ For example:
 2022-11-17 13:00 worked for 1 hour.
   - Switched my attempt to store the highscore into last score on the session stats page
   - Created a function with an if statement to check if the last score is higher than the highscore, if it is it stores it as the new highscore.
+  - Started designing the session stats page.
