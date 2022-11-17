@@ -116,6 +116,17 @@ a:hover {
     background: #0077B8;
     color: #0096C7;
 }
+#totalStat,
+#lastScore,
+#highscoreText {
+    font-size: 150%;
+    text-align: left;
+    margin-left: 40px;
+}
+.sessionStatSection {
+    width: 400px;
+    height: 200px;
+}
 
 
 /* DROPDOWN MENU */
