@@ -34,8 +34,11 @@ For example:
   - Spent some time reading up on different addEventListeners.  
 -2022-11-16 10:30 worked for 1 hour.
   - Started working with saving highscores.
-2022-11-16 14:30 
+2022-11-16 14:30 worked for 3 hours
   - Switched from linking font to importing it
   - Started a "Your Session Stats" page, to display scores from local storage
   - Added a "total" score stat, that displays the number of correct answers in total this serssion.
   - Continued to work with storing highscores (see number 8 in bug-list).
+2022-11-17 13:00 worked for 1 hour.
+  - Switched my attempt to store the highscore into last score on the session stats page
+  - Created a function with an if statement to check if the last score is higher than the highscore, if it is it stores it as the new highscore.

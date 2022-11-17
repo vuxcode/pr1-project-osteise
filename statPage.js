@@ -12,20 +12,31 @@ getTotal();
 // output the total score on the session stats page
 document.getElementById("totalStat").innerHTML = "Your total stat is: " + total;
 
-
-// get the highscore from the program by creating a function
-function getHighscore() {
-    // get the score from the local storage
-    highscore = localStorage.getItem("saved_score");
-    // turn the highscore into a number
-    highscore = Number(highscore);
-    console.log(highscore);
+// create a function to get the last score
+function getLastScore() {
+    // get the last score from the local storage
+    lastScore = localStorage.getItem("saved_last");
+    // check it 
+    console.log(lastScore);
 }
 
 // run the function when the program loads
-getHighscore();
+getLastScore();
 
 localStorage.getItem("saved_highscore");
 
+// output the last score on the session stats page
+document.getElementById("lastScore").innerHTML = "Your latest score is: " + lastScore;
+
+// get the highscore from the local storage
+function getHighscore() {
+    // get the highscore from the local storage
+    highscore = localStorage.getItem("saved_highscore");
+    // check it
+    console.log("highscore = " + highscore);
+}
+// run the program
+getHighscore();
+
 // output the highscore on the session stats page
-document.getElementById("highscore").innerHTML = "Your highest score is: " + highscore;
+document.getElementById("highscoreText").innerHTML = "Your highscore is: " + highscore;

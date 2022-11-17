@@ -78,27 +78,43 @@ function getScore() {
 // run the function when the program starts
 getScore();
 
-// create an array to store the highscores
-var highscore = [];
+// create a variable to store the last score
+var lastScore;
 
-// create a function to push the score into the array
-function pushScore() {
-    // push the score value into the highscore array
-    highscore = score;
+// create a function to store the last score
+function pushLast() {
+    // make the lastscore var to have the score value
+    lastScore = score;
     // save it to the local storage
-    localStorage.setItem("saved_score", JSON.stringify(highscore));
+    localStorage.setItem("saved_last", lastScore);
     // check it 
-    console.log(highscore);
+    console.log(lastScore);
 }
-// create a function to get the highscore
-function getHighscore() {
+// create a function to get the lastScore
+function getLastScore() {
     // get the highscore from the local storage
-    highscore = localStorage.getItem("saved_score");
+    lastScore = localStorage.getItem("saved_last");
     // display the current score
-    console.log(highscore);
+    console.log(lastScore);
 }
 // load the highscore when the program loads
-getHighscore();
+getLastScore();
+
+// create a variable to store the highest score
+var highscore;
+
+// create a function with an if-statement to check if the lastscore is higher than the highscore
+function checkHighscore() {
+    // get the saved highscore value from the local storage
+    highscore = localStorage.getItem("saved_highscore");
+    // if the last score is higher than the highscore, make it the new highscore
+    if (lastScore > highscore) {
+        highscore = lastScore;
+        // store the new highscore in the local storage
+        localStorage.setItem("saved_highscore", highscore);
+    }
+}
+
 
 // create the submit button element
 var submitButton = document.getElementById("submitInner");
@@ -406,7 +422,9 @@ function checkAnswerA() {
         // turn the correct answer green
         findAnswer();
         // push the score in to the highscore array
-        pushScore();
+        pushLast();
+        // check if its a new highscore
+        checkHighscore();
         // change the text of the submit button
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
@@ -445,7 +463,9 @@ function checkAnswerB() {
         // turn the correct answer green
         findAnswer();
         // push the score in to the highscore array
-        pushScore();
+        pushLast();
+        // check if its a new highscore
+        checkHighscore();
         // change the text of the submit button
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
@@ -482,7 +502,9 @@ function checkAnswerC() {
         wrongColorC('#AE2021');
         findAnswer();
         // push the score in to the highscore array
-        pushScore();
+        pushLast();
+        // check if its a new highscore
+        checkHighscore();
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
         // set incorrect to true, so the program knows it needs to end
@@ -514,7 +536,9 @@ function checkAnswerD() {
         wrongColorD('#AE2021');
         findAnswer();
         // push the score in to the highscore array
-        pushScore();
+        pushLast();
+        // check if its a new highscore
+        checkHighscore();
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
         submit.disabled = false;
         // set incorrect to true, so the program knows it needs to end
