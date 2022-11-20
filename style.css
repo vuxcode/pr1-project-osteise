@@ -22,7 +22,10 @@ body {
     width: 250px;
     }
 main {
-    text-align: center;
+    /* text-align: center; */
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     }
 nav {
     text-align: right;
@@ -63,7 +66,7 @@ h1 {
     height: 60px;
     width: 350px;
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 30px;
     }
 /* #optionA:hover:enabled,
 #optionB:hover:enabled,
@@ -97,6 +100,25 @@ h1 {
     }
 #submitInner {
     font-size: 150%;
+}
+#fiftyfifty {
+    background: #023E8A;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 400px;
+    border: 3px solid #0077B8;
+    border-radius: 30px 30px 30px 5px;
+    margin-top: 10px;
+}
+#fiftyInner {
+    font-size: 200%;
+}
+#fiftyfifty:hover {
+    background: #0077B8;
+}
+#fiftyfifty:disabled:hover {
+    background: #023E8A;
 }
 a:hover {
     background: #0077B8;

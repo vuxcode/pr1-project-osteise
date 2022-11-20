@@ -51,6 +51,12 @@ var callQuestEight;
 var callQuestNine;
 var callQuestTen;
 
+// create some variables to set to true in the 50/50 function to know if the option has been removed
+var optACalled = false;
+var optBCalled = false;
+var optCCalled = false;
+var optDCalled = false;
+
 // create a variable so the program knows it needs to reload when an answer is wrong
 var incorrect = false;
 
@@ -121,6 +127,11 @@ var submitButton = document.getElementById("submitInner");
 submitButton.innerText="Press the button that you think is the correct answer!";
 // disable submit button
 submit.disabled = true;
+
+// create the 50/50 button element
+var fiftyButton = document.getElementById("fiftyInner");
+// create the text in the button
+fiftyButton.innerText="50/50";
 
 // create a variable to be able to update the level counter
 var levelNumber = ("Question 1");
@@ -361,6 +372,268 @@ function questTen() {
 
     // update the correctOpt output to be the correct answer
     correctOpt = opt1[0];
+}
+
+// create a function for each option button that makes the button empty (for 50/50 button)
+function optAEmpty() {
+    // target the id and create an output that says WRONG
+    optAInner.innerText="WRONG";
+    // also disable the button
+    optionA.disabled = true;
+}
+// repeat for the rest of the option buttons
+function optBEmpty() {
+    optBInner.innerText="WRONG";
+    optionB.disabled = true;
+}
+function optCEmpty() {
+    optCInner.innerText="WRONG";
+    optionC.disabled = true;
+}
+function optDEmpty() {
+    optDInner.innerText="WRONG";
+    optionD.disabled = true;
+}
+
+// create a random function generator to pick a button function that is incorrect
+function optACorrect() {
+    // create a variable to use in the switch statement
+    var lifeline = Math.floor(Math.random() * 3);
+    // put in the functions that disables the wrong options. 
+    switch(lifeline) {
+        case 0:
+            // call the function to replace the text in the option button
+            optBEmpty();
+            // set it's variable to true
+            optBCalled = true;
+            break;
+        case 1: 
+            optCEmpty();
+            optCCalled = true;
+            break;
+        case 2: 
+            optDEmpty();
+            optDCalled = true;
+            break;
+    }
+    // create a variable to use for a second switch statement
+    var secondLifeline = Math.floor(Math.random() * 2);
+    // create an if statement to find out which option has been removed
+    if (optBCalled) {
+        // run another switch statement to choose the second option button to remove
+        switch(secondLifeline) {
+            case 0:
+                optCEmpty();
+                break;
+            case 1:
+                optDEmpty();
+                break;
+        }
+    }
+    // check if it was option C that was removed and removed another random wrong answer
+    else if (optCCalled) {
+        switch(secondLifeline) {
+            case 0: 
+                optBEmpty();
+                break;
+            case 1:
+                optDEmpty();
+                break;
+        }
+    }
+    // repeat for the last button
+    else if (optDCalled) {
+        switch(secondLifeline) {
+            case 0:
+                optBEmpty();
+                break;
+            case 1: 
+                optCEmpty();
+                break;
+        }
+    }
+    // disable the 50/50 button
+    fiftyfifty.disabled = true;
+    // change the color of it to show that it was been used
+    fiftyfifty.style.background="grey";
+}
+
+// repeat the whole function to use if option B is correct
+function optBCorrect() {
+    var lifeline = Math.floor(Math.random() * 3);
+    switch(lifeline) {
+        case 0:
+            optAEmpty();
+            optACalled = true;
+            break;
+        case 1: 
+            optCEmpty();
+            optCCalled = true;
+            break;
+        case 2: 
+            optDEmpty();
+            optDCalled = true;
+            break;
+    }
+    var secondLifeline = Math.floor(Math.random() * 2);
+    if (optACalled) {
+        switch(secondLifeline) {
+            case 0:
+                optCEmpty();
+                break;
+            case 1:
+                optDEmpty();
+                break;
+        }
+    }
+    else if (optCCalled) {
+        switch(secondLifeline) {
+            case 0: 
+                optAEmpty();
+                break;
+            case 1:
+                optDEmpty();
+                break;
+        }
+    }
+    else if (optDCalled) {
+        switch(secondLifeline) {
+            case 0:
+                optAEmpty();
+                break;
+            case 1: 
+                optCEmpty();
+                break;
+        }
+    }
+    // disable the 50/50 button
+    fiftyfifty.disabled = true;
+    // change the color of it to show that it was been used
+    fiftyfifty.style.background="grey";
+}
+
+// repeat again if option C is correct
+function optCCorrect() {
+    var lifeline = Math.floor(Math.random() * 3);
+    switch(lifeline) {
+        case 0:
+            optAEmpty();
+            optACalled = true;
+            break;
+        case 1: 
+            optBEmpty();
+            optBCalled = true;
+            break;
+        case 2: 
+            optDEmpty();
+            optDCalled = true;
+            break;
+    }
+    var secondLifeline = Math.floor(Math.random() * 2);
+    if (optACalled) {
+        switch(secondLifeline) {
+            case 0:
+                optBEmpty();
+                break;
+            case 1:
+                optDEmpty();
+                break;
+        }
+    }
+    else if (optBCalled) {
+        switch(secondLifeline) {
+            case 0: 
+                optAEmpty();
+                break;
+            case 1:
+                optDEmpty();
+                break;
+        }
+    }
+    else if (optDCalled) {
+        switch(secondLifeline) {
+            case 0:
+                optAEmpty();
+                break;
+            case 1: 
+                optBEmpty();
+                break;
+        }
+    }
+    // disable the 50/50 button
+    fiftyfifty.disabled = true;
+    // change the color of it to show that it was been used
+    fiftyfifty.style.background="grey";
+}
+
+// repeat again if option D is correct
+function optDCorrect() {
+    var lifeline = Math.floor(Math.random() * 3);
+    switch(lifeline) {
+        case 0:
+            optAEmpty();
+            optACalled = true;
+            break;
+        case 1: 
+            optBEmpty();
+            optBCalled = true;
+            break;
+        case 2: 
+            optCEmpty();
+            optCCalled = true;
+            break;
+    }
+    var secondLifeline = Math.floor(Math.random() * 2);
+    if (optACalled) {
+        switch(secondLifeline) {
+            case 0:
+                optBEmpty();
+                break;
+            case 1:
+                optCEmpty();
+                break;
+        }
+    }
+    else if (optBCalled) {
+        switch(secondLifeline) {
+            case 0: 
+                optAEmpty();
+                break;
+            case 1:
+                optCEmpty();
+                break;
+        }
+    }
+    else if (optCCalled) {
+        switch(secondLifeline) {
+            case 0:
+                optAEmpty();
+                break;
+            case 1: 
+                optBEmpty();
+                break;
+        }
+    }
+    // disable the 50/50 button
+    fiftyfifty.disabled = true;
+    // change the color of it to show that it was been used
+    fiftyfifty.style.background="grey";
+}
+
+// create the 50/50 lifeline function
+function fiftyFifty() {
+    if (optA) {
+        optACorrect();
+    }
+    else if (optB) {
+        optBCorrect();
+    }
+    else if (optC) {
+        optCCorrect();
+    }
+    else if (optD) {
+        optDCorrect();
+    }
 }
 
 // create a random function generator to choose a random question

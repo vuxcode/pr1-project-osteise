@@ -43,3 +43,6 @@ For example:
   - Switched my attempt to store the highscore into last score on the session stats page
   - Created a function with an if statement to check if the last score is higher than the highscore, if it is it stores it as the new highscore.
   - Started designing the session stats page.
+2022-11-20 21:30 
+  - Started working with a 50/50 button that removes two of the wrong options. It will be available to use once per game.
+  
