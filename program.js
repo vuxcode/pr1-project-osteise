@@ -115,7 +115,6 @@ function checkHighscore() {
     }
 }
 
-
 // create the submit button element
 var submitButton = document.getElementById("submitInner");
 // create the default text to the submit button

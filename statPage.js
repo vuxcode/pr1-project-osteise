@@ -40,3 +40,4 @@ getHighscore();
 
 // output the highscore on the session stats page
 document.getElementById("highscoreText").innerHTML = "Your highscore is: " + highscore;
+
