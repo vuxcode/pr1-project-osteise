@@ -43,6 +43,9 @@ For example:
   - Switched my attempt to store the highscore into last score on the session stats page
   - Created a function with an if statement to check if the last score is higher than the highscore, if it is it stores it as the new highscore.
   - Started designing the session stats page.
-2022-11-20 21:30 
+2022-11-20 21:30 worked for 3 hours.
   - Started working with a 50/50 button that removes two of the wrong options. It will be available to use once per game.
-  
+  - Changed some things in style.css: added width to the main element to better be able to place the 50/50 button on the left side
+  - Created functions and if and switch statements to check which option is the correct one and to by random remove two of the options.
+  - Created a Hint button to be second type of lifeline (they will only be able to be used once each) these hints will be placed in each question functions to be able to be displayed. 
+  - Wrote the code needed to disable and enable the hint buttons in between the questions, I don't want the users to burn the lifeline while "in between" questions is they press them by accident.

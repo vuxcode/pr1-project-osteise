@@ -57,6 +57,11 @@ var optBCalled = false;
 var optCCalled = false;
 var optDCalled = false;
 
+// create a hint variable to store the hint for the queston
+var hint;
+// target the hint button element
+var hintButton = document.getElementById("hint");
+
 // create a variable so the program knows it needs to reload when an answer is wrong
 var incorrect = false;
 
@@ -133,6 +138,17 @@ var fiftyButton = document.getElementById("fiftyInner");
 // create the text in the button
 fiftyButton.innerText="50/50";
 
+// create a variable to check if 50/50 it has been used 
+var checkFifty = false;
+
+// create the hint button element
+var hintInner = document.getElementById("hintInner");
+// create the text in the button
+hintInner.innerText="Get a Hint!";
+
+// create a variable to check if hint has been used
+var checkHint = false;
+
 // create a variable to be able to update the level counter
 var levelNumber = ("Question 1");
 // target the element
@@ -150,6 +166,7 @@ function questOne() {
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
     
+    hint = "'Born to Run' is featured on an album called just that, 'Born to Run'.\nBut is it really made by Michael Jackson?";
 
     // change the variables to the correct/incorrect answers
     optA = false;
@@ -374,6 +391,18 @@ function questTen() {
     correctOpt = opt1[0];
 }
 
+// create a function that replaces the text in the submit button with a hint
+function getAHint() {
+    // make the text in the submit button the hint variable
+    submitButton.innerText=hint;
+    // disable the hint button
+    hintButton.disabled = true;
+    // change the color of the button so the user knows it has been used
+    hintButton.style.backgroundColor="grey";
+    // set the check hint variable to true to learn that it has been used
+    checkHint = true;
+}
+
 // create a function for each option button that makes the button empty (for 50/50 button)
 function optAEmpty() {
     // target the id and create an output that says WRONG
@@ -456,6 +485,7 @@ function optACorrect() {
     fiftyfifty.disabled = true;
     // change the color of it to show that it was been used
     fiftyfifty.style.background="grey";
+    checkFifty = true;
 }
 
 // repeat the whole function to use if option B is correct
@@ -510,6 +540,7 @@ function optBCorrect() {
     fiftyfifty.disabled = true;
     // change the color of it to show that it was been used
     fiftyfifty.style.background="grey";
+    checkFifty = true;
 }
 
 // repeat again if option C is correct
@@ -564,6 +595,7 @@ function optCCorrect() {
     fiftyfifty.disabled = true;
     // change the color of it to show that it was been used
     fiftyfifty.style.background="grey";
+    checkFifty = true;
 }
 
 // repeat again if option D is correct
@@ -618,6 +650,7 @@ function optDCorrect() {
     fiftyfifty.disabled = true;
     // change the color of it to show that it was been used
     fiftyfifty.style.background="grey";
+    checkFifty = true;
 }
 
 // create the 50/50 lifeline function
@@ -705,22 +738,25 @@ function checkAnswerA() {
     }
     // if the answer is correct
     else {
-    console.log("That's correct!");
-    correctColor('#0F5132');
-    // use the function to turn the button green
-    ifWrongA('#0F5132');
-    submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
-    // enable the submit button
-    submit.disabled = false;
-    // update the score
-    score++;
-}
+        console.log("That's correct!");
+        correctColor('#0F5132');
+        // use the function to turn the button green
+        ifWrongA('#0F5132');
+        submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
+        // enable the submit button
+        submit.disabled = false;
+        // update the score
+        score++;
+    }
     // disable ALL the option buttons
     optionA.disabled = true;
     optionB.disabled = true;
     optionC.disabled = true;
     optionD.disabled = true;
-
+    // disable the lifeline buttons
+    fiftyfifty.disabled = true;
+    hintButton.disabled = true;
+    
 }
 
 // create function to check option B
@@ -763,7 +799,9 @@ function checkAnswerB() {
     optionB.disabled = true;
     optionC.disabled = true;
     optionD.disabled = true;
-
+    // disable the lifeline buttons
+    fiftyfifty.disabled = true;
+    hintButton.disabled = true;
 }
 
 // create function to check option C
@@ -797,7 +835,9 @@ function checkAnswerC() {
     optionB.disabled = true;
     optionC.disabled = true;
     optionD.disabled = true;
-
+    // disable the lifeline buttons
+    fiftyfifty.disabled = true;
+    hintButton.disabled = true;
 }
 
 // create function to check option D
@@ -831,7 +871,9 @@ function checkAnswerD() {
     optionB.disabled = true;
     optionC.disabled = true;
     optionD.disabled = true;
-
+    // disable the lifeline buttons
+    fiftyfifty.disabled = true;
+    hintButton.disabled = true;
 }
 
 // create a function to change the submit button to red if the answer is wrong
@@ -961,7 +1003,19 @@ function resetColors() {
     optionB.disabled = false;
     optionC.disabled = false;
     optionD.disabled = false;
-    
+    // check if 50/50 should be enabled
+    if (checkFifty) {
+        fiftyfifty.disabled = true;
+    }
+    else if (checkFifty == false)
+        fiftyfifty.disabled = false;
+    // check if hint should be enabled
+    if (checkHint) {
+        hintButton.disabled = true;
+    }
+    else if (checkHint == false) {
+        hintButton.disabled = false;
+    }
 }
 
 
