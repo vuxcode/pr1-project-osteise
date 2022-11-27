@@ -165,20 +165,16 @@ function questOne() {
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-    
-    hint = "'Born to Run' is featured on an album called just that, 'Born to Run'.\nBut is it really made by Michael Jackson?";
-
+    // create a hint
+    hint = "One of these songs might be made by Bruce Springsteen.";
     // change the variables to the correct/incorrect answers
     optA = false;
     optB = false;
     optC = true;
     optD = false;
-
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[2];
-    
 } 
-
 // create function to output question number two
 function questTwo() {
     // create the question output
@@ -190,18 +186,16 @@ function questTwo() {
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-    
+    // create a hint
+    hint = "One of these songs are made by John Lennon, but not by The Beatles.";
     // change the variable to the correct/incorrect answers
     optA = false;
     optB = false;
     optC = false;
     optD = true;
-
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
-
 } 
-
 // create question number three function
 function questThree() {
     // create the question output
@@ -213,17 +207,16 @@ function questThree() {
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-
+    // create a hint
+    hint = "Elvis Presley was a big icon during the same time as Johnny Cash.\nOne of these songs are made by Elvis."
     // change the variable to the correct/incorrect answers
     optA = true;
     optB = false;
     optC = false;
     optD = false;
-
     // update the correctOpt to output the correct answer in submit button
     correctOpt = opt1[0];
 }
-
 // create question number four function
 function questFour() {
     // create the question output
@@ -237,17 +230,16 @@ function questFour() {
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-
+    // create a hint 
+    hint = "One of these songs are made by the rockband Queen."
     // change the variable to the correct/incorrect answers
     optA = true;
     optB = false;
     optC = false;
     optD = false;
-
     // update the correctOpt to output the correct answer in submit button
     correctOpt = opt1[0];
 }
-
 // create question number five function
 function questFive() {
     // create the question output
@@ -261,17 +253,16 @@ function questFive() {
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-
+    // create a hint
+    hint = "One of theese songs are made by the Jamaican raggaeband 'Inner Circle'";
     // change the variable to the correct/incorrect answers
     optA = false;
     optB = false;
     optC = true;
     optD = false;
-
     // update the correctOpt to output the correct answer in submit button
     correctOpt = opt1[2];
 }
-
 // create question number six function
 function questSix() {
     // create the question output
@@ -285,17 +276,16 @@ function questSix() {
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-
+    // create a hint
+    hint = "One of theese songs are made by Journey."
     // change the variable to the correct/incorrect answers
     optA = false;
     optB = false;
     optC = false;
     optD = true;
-
     // update the correctOpt to output the correct answer if wrong answer is selected
     correctOpt = opt1[3];
 }
-
 // create question number seven function
 function questSeven() {
     // create the question output
@@ -309,17 +299,16 @@ function questSeven() {
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-
+    // create a hint 
+    hint = "Billy Idol made one of theese songs.";
     // change the variables to the correct/incorrect answers
-    optA = true;
-    optB = false;
+    optA = false;
+    optB = true;
     optC = false;
     optD = false;
-
     // update the correctOpt output to the correct answer
-    correctOpt = opt1[0];
+    correctOpt = opt1[1];
 }
-
 // create question number eight function
 function questEight() {
     // create the question output
@@ -333,64 +322,61 @@ function questEight() {
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-
+    // create a hint
+    hint = "Queen made one of theese songs.";
     // change the variable to true or false
     optA = false;
     optB = true;
     optC = false;
     optD = false;
-
     // update the correctOpt output to be the correct answer
     correctOpt = opt1[1];
 }
-
 // create the question number nine function
 function questNine() {
     // create the question output
-    var q1 = ("What song is not made by Lady Gaga?");
+    var q1 = ("What song is not made by Queen?");
     // output the question
     question.innerText=q1;
     // create the option outputs in an array
-    var opt1 = ["Bad Romance", "Alejandro", "The Edge of Glory", "Roar"];
+    var opt1 = ["Bohemian Rhapsody", "Don't Stop Me Now", "Don't Stop Believin'", "I Want To Break Free"];
     //output the array in the option buttons
     optA.innerText=opt1[0];
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-
+    // create a hint
+    hint = "One of theese songs are made by Journey.";
     // change the variable to true or false
     optA = false;
     optB = false;
-    optC = false;
-    optD = true;
-
+    optC = true;
+    optD = false;
     // update the correctOpt output to be the correct answer
     correctOpt = opt1[3];
 }
-
 function questTen() {
     // create the question output
-    var q1 = ("What song is not made by Britney Spears?");
+    var q1 = ("What song is not made by Motley Crue?");
     // output the question
     question.innerText=q1;
     // create the option outputs in an array
-    var opt1 = ["Gimme, Gimme, Gimme", "Toxic", "Oops!... I Did it Again", "... Baby One More Time"];
+    var opt1 = ["Thunderstruck", "Kickstart My Heart", "Girls, Girls, Girls", "Dr. Feelgood"];
     // output the array in the option boxes
     optA.innerText=opt1[0];
     optB.innerText=opt1[1];
     optC.innerText=opt1[2];
     optD.innerText=opt1[3];
-
+    // create a hint
+    hint = "One of theese songs are made by AC/DC.";
     // change the variables to true or false
     optA = true;
     optB = false;
     optC = false;
     optD = false;
-
     // update the correctOpt output to be the correct answer
     correctOpt = opt1[0];
 }
-
 // create a function that replaces the text in the submit button with a hint
 function getAHint() {
     // make the text in the submit button the hint variable
@@ -487,7 +473,6 @@ function optACorrect() {
     fiftyfifty.style.background="grey";
     checkFifty = true;
 }
-
 // repeat the whole function to use if option B is correct
 function optBCorrect() {
     var lifeline = Math.floor(Math.random() * 3);
@@ -542,7 +527,6 @@ function optBCorrect() {
     fiftyfifty.style.background="grey";
     checkFifty = true;
 }
-
 // repeat again if option C is correct
 function optCCorrect() {
     var lifeline = Math.floor(Math.random() * 3);
@@ -597,7 +581,6 @@ function optCCorrect() {
     fiftyfifty.style.background="grey";
     checkFifty = true;
 }
-
 // repeat again if option D is correct
 function optDCorrect() {
     var lifeline = Math.floor(Math.random() * 3);
@@ -709,10 +692,8 @@ function randomQuestion() {
             break;  
         }     
     }
-
 // run the first random function generator when the program loads
 randomQuestion();
-
 
 // create function to check option A
 function checkAnswerA() {
@@ -758,7 +739,6 @@ function checkAnswerA() {
     hintButton.disabled = true;
     
 }
-
 // create function to check option B
 function checkAnswerB() {
     if (optB == false) {
@@ -803,7 +783,6 @@ function checkAnswerB() {
     fiftyfifty.disabled = true;
     hintButton.disabled = true;
 }
-
 // create function to check option C
 function checkAnswerC() {
     if (optC == false) {
@@ -839,7 +818,6 @@ function checkAnswerC() {
     fiftyfifty.disabled = true;
     hintButton.disabled = true;
 }
-
 // create function to check option D
 function checkAnswerD() {
     if (optD == false) {
@@ -883,7 +861,6 @@ function wrongColor(newColorRed) {
     // update the background color of the button
     changeWrongColor.style.background = newColorRed;
 }
-
 // create a function to switch the option button A to red if it's the wrong answer
 function wrongColorA(newColorRed) {
     // find the element that controls option A
@@ -891,7 +868,6 @@ function wrongColorA(newColorRed) {
     // update the background color of the button
     changeWrongColorA.style.background = newColorRed;
 }
-
 // create a function to change the option button B color to red if it's the wrong answer
 function wrongColorB(newColorRed) {
     // find the element that controls option B
@@ -899,7 +875,6 @@ function wrongColorB(newColorRed) {
     // update the background color of the button
     changeWrongColorB.style.background = newColorRed;
 }
-
 // create a function to change the option button C color to red if it's wrong
 function wrongColorC(newColorRed) {
     // find the element that controls option C button
@@ -907,7 +882,6 @@ function wrongColorC(newColorRed) {
     // update the background color of the button
     changeWrongColorC.style.background = newColorRed;
 }
-
 // create a function to change the option button D color to red if it's wrong
 function wrongColorD(newColorRed) {
     // find the element that controls option D button
@@ -973,10 +947,6 @@ function findAnswer() {
         ifWrongD('#0F5132');
     }
 }
-
-/*
-*/
-
 // create a function to reset the colors on the buttons between questions
 function resetColors() {
     // find the element
@@ -1017,15 +987,11 @@ function resetColors() {
         hintButton.disabled = false;
     }
 }
-
-
 // QUESTION NUMBER TWO
-
 function questOneTwo() {
     // create the question output
     var q1 = ("Where are the members of AC/DC from?");
     question.innerText=q1;
-
     // create the option outputs
     var opt1 = ["England", "Ireland", "America", "Australia"];
     // update the outputs
@@ -1033,23 +999,20 @@ function questOneTwo() {
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "They are not from Europe.";
     // change the variables to the correct/incorrect answers
     optA = false;
     optB = false;
     optC = false;
     optD = true;
-    
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
 }
-
 function questTwoTwo() {
     // create the question output
     var q1 = ("Where are the members of ABBA from?");
     question.innerText=q1;
-
     // create the option outputs
     var opt1 = ["England", "Sweden", "Norway", "America"];
     // update the outputs
@@ -1057,23 +1020,20 @@ function questTwoTwo() {
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "They are Scandinavians";
     // change the variables to the correct/incorrect answers
     optA = false;
     optB = true;
     optC = false;
     optD = false;
-    
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
 }
-
 function questThreeTwo() {
     // create the question output
     var q1 = ("What country was Michael Jackson born in?");
     question.innerText=q1;
-
     // create the option outputs
     var opt1 = ["America", "South Africa", "England", "Canada"];
     // update the outputs
@@ -1081,23 +1041,62 @@ function questThreeTwo() {
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "He is born somewhere in North America";
     // change the variables to the correct/incorrect answers
     optA = true;
     optB = false;
     optC = false;
     optD = false;
-    
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[0];
 }
-
 function questFourTwo() {
+    // create the question output
+    var q1 = ("In what country was Bruce Springsteen born in?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["America", "Australia", "New Zealand", "Canada"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "He has a song about it.";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+}
+function questFiveTwo() {
+    // create the question output
+    var q1 = ("In what country was Queen formed?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["England", "Belgium", "America", "Ireland"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "They were formed in Europe.";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+}
+function questSixTwo() {
     // create the question output
     var q1 = ("In what country was Elton John born in?");
     question.innerText=q1;
-
     // create the option outputs
     var opt1 = ["Germany", "Scotland", "Canada", "England"];
     // update the outputs
@@ -1105,28 +1104,108 @@ function questFourTwo() {
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "He is European";
     // change the variables to the correct/incorrect answers
     optA = false;
     optB = false;
     optC = false;
     optD = true;
-    
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
 }
-
-
+function questSevenTwo() {
+    // create the question output
+    var q1 = ("In what country was Bob Marley born in?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Nigeria", "South Africa", "Jamaica", "Somalia"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "He often uses the colors of his home country's flag.\nThese colors are: red, green and yellow.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+}
+function questEightTwo() {
+    // create the question output
+    var q1 = ("In what country was Motley Crue formed?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Australia", "America", "Germany", "The Netherlands"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "They are not from Europe.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+function questNineTwo() {
+    // create the question output
+    var q1 = ("In what country was Elvis Presley born in?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Canada","The Netherlands", "Germany", "America"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "He is not European";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+}
+function questTenTwo() {
+    // create the question output
+    var q1 = ("In what country was Johnny Cash born in?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Denmark", "Argentina", "America", "England"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "He is not European";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+}
 function randomQuestionTwo() {    
     // change the level number to 2
     var levelNumber = ("Question 2");
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 2
-    var random = Math.floor(Math.random() * 4);
+    var random = Math.floor(Math.random() * 10);
     callQuestTwo = true;
-
     // put in the question functions
     switch(random) {
         case 0:
@@ -1141,116 +1220,535 @@ function randomQuestionTwo() {
         case 3:
             questFourTwo();
             break;
-        
+        case 4:
+            questFiveTwo();
+            break;
+        case 5:
+            questSixTwo();
+            break;
+        case 6:
+            questSevenTwo();
+            break;
+        case 7:
+            questEightTwo();
+            break;
+        case 8: 
+            questNineTwo();
+            break;
+        case 9:
+            questTenTwo();
+            break;
     }
 }
-
-
-
-
-
-
-
-
 // QUESTION NUMBER THREE
-
-
 function questOneThree() {
     // create the question output
-    var q1 = ("HEJ");
+    var q1 = ("When did Michael Jackson realese his debut solo single?");
     question.innerText=q1;
-    
     // create the option outputs
-    var opt1 = ["Rätt", "Fel", "Fel", "Fel"];
+    var opt1 = ["1968", "1969", "1971", "1973"];
     // update the outputs
     optAInner.innerText=opt1[0];
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "It was released in the '70s";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+}
+function questTwoThree() {
+    // create the question output
+    var q1 = ("When did ABBA release their first song?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1977", "1972", "1980", "1985"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '70s";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+function questThreeThree() {
+    // create the question output
+    var q1 = ("When did Elvis Presley release his first song?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1965", "1949", "1954", "1959"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '50s";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+}
+function questFourThree() {
+    // create the question output
+    var q1 = ("When did Bob Marley release his first song?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1979", "1962", "1975", "1969"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '60s";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+function questFiveThree() {
+    // create the question output
+    var q1 = ("When did Bruce Springsteen realese his first album?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1972", "1978", "1981", "1983"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '70s";
     // change the variables to the correct/incorrect answers
     optA = true;
     optB = false;
     optC = false;
     optD = false;
-    
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[0];
 }
-
+function questSixThree() {
+    // create the question output
+    var q1 = ("When did Queen release their first album?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1963", "1969", "1973", "1979"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '70s";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+}
+function questSevenThree() {
+    // create the question output
+    var q1 = ("When did Elton John release his debut album?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1978", "1979", "1968", "1969"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '60s";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+}
+function questEightThree() {
+    // create the question output
+    var q1 = ("When did Johnny Cash release his first song?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1955", "1959", "1961", "1949"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '50s";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+}
+function questNineThree() {
+    // create the question output
+    var q1 = ("When did Motley Crue relase their first album?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1982", "1981", "1989", "1979"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the early '80s";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+}
+function questTenThree() {
+    // create the question output
+    var q1 = ("When did AC/DC release their first album?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1971", "1981", "1982", "1976"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '70s";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+}
 // create random question generator for question three
-
 function randomQuestionThree() {    
     // change the level number to 3
     var levelNumber = ("Question 3");
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 3
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 10);
     callQuestThree = true;
-
     // put in the question functions
     switch(random) {
         case 0:
             questOneThree();
             break;
+        case 1: 
+            questTwoThree();
+            break;
+        case 2:
+            questThreeThree();
+            break;
+        case 3: 
+            questFourThree();
+            break;
+        case 4:
+            questFiveThree();
+            break;
+        case 5: 
+            questSixThree();
+            break;
+        case 6:
+            questSevenThree();
+            break;
+        case 7:
+            questEightThree();
+            break;
+        case 8:
+            questNineThree();
+            break;
+        case 9: 
+            questTenThree();
+            break;
     }
 }
-
-
-
-
 // QUESTION FOUR
-
 function questOneFour() {
     // create the question output
-    var q1 = ("FRÅGA");
+    var q1 = ("What year did Michael Jackson pass away?");
     question.innerText=q1;
-    
     // create the option outputs
-    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    var opt1 = ["2009", "2005", "2010", "2012"];
     // update the outputs
     optAInner.innerText=opt1[0];
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "It was before 2010.";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+}
+function questTwoFour() {
+    // create the question output
+    var q1 = ("When did ABBA release their last album before their 2021 comeback?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1979", "1981", "1987", "1990"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in the '80s";
     // change the variables to the correct/incorrect answers
     optA = false;
     optB = true;
     optC = false;
     optD = false;
-    
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
 }
-
-
-
+function questThreeFour() {
+    // create the question output
+    var q1 = ("When did Elvis Presley pass away?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1987", "1981", "1983", "1977"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was 19*7";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+}
+function questFourFour() {
+   // create the question output
+   var q1 = ("When did the original AC/DC singer Bon Scott pass away?");
+   question.innerText=q1;
+   // create the option outputs
+   var opt1 = ["1980", "1970", "1983", "1973"];
+   // update the outputs
+   optAInner.innerText=opt1[0];
+   optBInner.innerText=opt1[1];
+   optCInner.innerText=opt1[2];
+   optDInner.innerText=opt1[3];
+   // create a hint
+   hint = "It was 19*70";
+   // change the variables to the correct/incorrect answers
+   optA = true;
+   optB = false;
+   optC = false;
+   optD = false;
+   //update correctOpt with the correct option to output when incorrect option is chosen
+   correctOpt = opt1[0];
+}
+function questFiveFour() {
+   // create the question output
+   var q1 = ("When did Bob Marley pass away?");
+   question.innerText=q1;
+   // create the option outputs
+   var opt1 = ["1988", "1981", "1991", "1994"];
+   // update the outputs
+   optAInner.innerText=opt1[0];
+   optBInner.innerText=opt1[1];
+   optCInner.innerText=opt1[2];
+   optDInner.innerText=opt1[3];
+   // create a hint
+   hint = "It was 19*1";
+   // change the variables to the correct/incorrect answers
+   optA = false;
+   optB = true;
+   optC = false;
+   optD = false;
+   //update correctOpt with the correct option to output when incorrect option is chosen
+   correctOpt = opt1[1];
+}
+function questSixFour() {
+   // create the question output
+   var q1 = ("What is Bruce Springsteen's primary backing band called?");
+   question.innerText=q1;
+   // create the option outputs
+   var opt1 = ["B Street Band", "Bruce Springsteen Backing Band", "The E Street Band", "Southside Johnny"];
+   // update the outputs
+   optAInner.innerText=opt1[0];
+   optBInner.innerText=opt1[1];
+   optCInner.innerText=opt1[2];
+   optDInner.innerText=opt1[3];
+   // create a hint
+   hint = "There is definitely a street involved.";
+   // change the variables to the correct/incorrect answers
+   optA = false;
+   optB = false;
+   optC = true;
+   optD = false;
+   //update correctOpt with the correct option to output when incorrect option is chosen
+   correctOpt = opt1[2];
+}
+function questSevenFour() {
+   // create the question output
+   var q1 = ("When did Queen frontman Freddie Mercury pass away?");
+   question.innerText=q1;
+   // create the option outputs
+   var opt1 = ["1999", "1993", "2001", "1991"];
+   // update the outputs
+   optAInner.innerText=opt1[0];
+   optBInner.innerText=opt1[1];
+   optCInner.innerText=opt1[2];
+   optDInner.innerText=opt1[3];
+   // create a hint
+   hint = "It was in the early '90s";
+   // change the variables to the correct/incorrect answers
+   optA = false;
+   optB = false;
+   optC = false;
+   optD = true;
+   //update correctOpt with the correct option to output when incorrect option is chosen
+   correctOpt = opt1[3];
+}
+function questEightFour() {
+   // create the question output
+   var q1 = ("When did Elton John's farewell tour 'Farewell Yellow Brick Road' start?");
+   question.innerText=q1;
+   // create the option outputs
+   var opt1 = ["2013", "2009", "2016", "2018"];
+   // update the outputs
+   optAInner.innerText=opt1[0];
+   optBInner.innerText=opt1[1];
+   optCInner.innerText=opt1[2];
+   optDInner.innerText=opt1[3];
+   // create a hint
+   hint = "It was sometime 201*";
+   // change the variables to the correct/incorrect answers
+   optA = false;
+   optB = false;
+   optC = false;
+   optD = true;
+   //update correctOpt with the correct option to output when incorrect option is chosen
+   correctOpt = opt1[3];
+}
+function questNineFour() {
+   // create the question output
+   var q1 = ("When did Johnny Cash pass away?");
+   question.innerText=q1;
+   // create the option outputs
+   var opt1 = ["2001", "2003", "1999", "1997"];
+   // update the outputs
+   optAInner.innerText=opt1[0];
+   optBInner.innerText=opt1[1];
+   optCInner.innerText=opt1[2];
+   optDInner.innerText=opt1[3];
+   // create a hint
+   hint = "It was sometime in the 21st century";
+   // change the variables to the correct/incorrect answers
+   optA = false;
+   optB = true;
+   optC = false;
+   optD = false;
+   //update correctOpt with the correct option to output when incorrect option is chosen
+   correctOpt = opt1[1];
+}
+function questTenFour() {
+   // create the question output
+   var q1 = ("When was Nikki Sixx of Motley Crue clinically dead for two minutes?");
+   question.innerText=q1;
+   // create the option outputs
+   var opt1 = ["1985", "1995", "1997", "1987"];
+   // update the outputs
+   optAInner.innerText=opt1[0];
+   optBInner.innerText=opt1[1];
+   optCInner.innerText=opt1[2];
+   optDInner.innerText=opt1[3];
+   // create a hint
+   hint = "It was 19*7";
+   // change the variables to the correct/incorrect answers
+   optA = false;
+   optB = false;
+   optC = false;
+   optD = true;
+   //update correctOpt with the correct option to output when incorrect option is chosen
+   correctOpt = opt1[3];
+}
 // create random question generator for question four
-
 function randomQuestionFour() {    
     // change the level number to 4
     var levelNumber = ("Question 4");
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 4
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 10);
     callQuestFour = true;
-
     // put in the question functions
     switch(random) {
         case 0:
             questOneFour();
             break;
+        case 1:
+            questTwoFour();
+            break;
+        case 2: 
+            questThreeFour();
+            break;
+        case 3:
+            questFourFour();
+            break;
+        case 4:
+            questFiveFour();
+            break;
+        case 5:
+            questSixFour();
+            break;
+        case 6:
+            questSevenFour();
+            break;
+        case 7:
+            questEightFour();
+            break;
+        case 8:
+            questNineFour();
+            break;
+        case 9:
+            questTenFour();
+            break;
     }
 }
-
-
 // QUESTION FIVE
-
 function questOneFive() {
     // create the question output
     var q1 = ("QUESTION");

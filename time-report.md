@@ -49,3 +49,5 @@ For example:
   - Created functions and if and switch statements to check which option is the correct one and to by random remove two of the options.
   - Created a Hint button to be second type of lifeline (they will only be able to be used once each) these hints will be placed in each question functions to be able to be displayed. 
   - Wrote the code needed to disable and enable the hint buttons in between the questions, I don't want the users to burn the lifeline while "in between" questions is they press them by accident.
+2022-11-27 19:30 2 hours
+  - Created questions and hints for question two, three and four.
