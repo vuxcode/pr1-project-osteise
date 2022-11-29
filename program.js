@@ -61,7 +61,8 @@ var optDCalled = false;
 var hint;
 // target the hint button element
 var hintButton = document.getElementById("hint");
-
+// create a variable to know when you win the game
+var youHaveWon = false;
 // create a variable so the program knows it needs to reload when an answer is wrong
 var incorrect = false;
 
@@ -717,8 +718,19 @@ function checkAnswerA() {
         // set incorrect to true, so the program knows it needs to end
         incorrect = true;
     }
+    // else if its the last question
+    else if (youHaveWon) {
+        // update the score
+        score++;
+        // use the function to turn the button green
+        ifWrongA('#0F5132');
+        // run the function to let hem know that they have won
+        youWin();
+        // enable the submit button
+        submit.disabled = false;
+    }
     // if the answer is correct
-    else {
+    else if (optA) {
         console.log("That's correct!");
         correctColor('#0F5132');
         // use the function to turn the button green
@@ -737,7 +749,6 @@ function checkAnswerA() {
     // disable the lifeline buttons
     fiftyfifty.disabled = true;
     hintButton.disabled = true;
-    
 }
 // create function to check option B
 function checkAnswerB() {
@@ -760,19 +771,30 @@ function checkAnswerB() {
         // set incorrect to true, so the program knows it needs to end
         incorrect = true;
     }
-    else {
-    // check it so that the button is working
-    console.log("That's correct!");
-    // update the color of the submit button
-    correctColor('#0F5132');
-    // use the function to turn the button green
-    ifWrongB('#0F5132');
-    // change the text of the submit button
-    submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
-    // enable the submit button
-    submit.disabled = false;
-    // update the score
-    score++;
+    // else if its the last question
+    else if (youHaveWon) {
+        // update the score
+        score++;
+        // use the function to turn the button yellow
+        youWinB();
+        // run the function to let hem know that they have won
+        youWin();
+        // enable the submit button
+        submit.disabled = false;
+    }
+    else if (optB) {
+        // check it so that the button is working
+        console.log("That's correct!");
+        // update the color of the submit button
+        correctColor('#0F5132');
+        // use the function to turn the button green
+        ifWrongB('#0F5132');
+        // change the text of the submit button
+        submitInner.innerText="'" + correctOpt + "' is correct!\n Press this button to move to the next question!";
+        // enable the submit button
+        submit.disabled = false;
+        // update the score
+        score++;
     }
     // disable ALL the option buttons
     optionA.disabled = true;
@@ -799,7 +821,16 @@ function checkAnswerC() {
         // set incorrect to true, so the program knows it needs to end
         incorrect = true;
     }
-    else {
+    // else if its the last question
+    else if (youHaveWon) {
+        // update the score
+        score++;
+        // run the function to let hem know that they have won
+        youWin();
+        // enable the submit button
+        submit.disabled = false;
+    }
+    else if (optC) {
         console.log("That's correct!");
         correctColor('#0F5132');
         ifWrongC('#0F5132');
@@ -834,7 +865,16 @@ function checkAnswerD() {
         // set incorrect to true, so the program knows it needs to end
         incorrect = true;
     }
-    else {
+    // else if its the last question
+    else if (youHaveWon) {
+        // update the score
+        score++;
+        // run the function to let hem know that they have won
+        youWin();
+        // enable the submit button
+        submit.disabled = false;
+    }
+    else if (optD) {
         console.log("That's correct!");
         correctColor('#0F5132');
         ifWrongD('#0F5132');
@@ -2006,7 +2046,8 @@ function questOneTen() {
     optB = true;
     optC = false;
     optD = false;
-    
+    // set youHaveWon to the correct option so we know they have won
+    youHaveWon = optB;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
 }
@@ -2029,9 +2070,86 @@ function randomQuestionTen() {
             break;
     }
 }
-
-
-
+// create a function to turn option button A to yellow when you win
+function youWinA() {
+    // target the elements
+    document.getElementById("optionA").style.background = 'rgba(255,245,46,1)';
+    document.getElementById("optionA").style["box-shadow"] = "0px 0px 70px 70px rgba(255,245,46,1)";
+    document.getElementById("optAInner").style.color = 'black';
+    document.getElementById("optionA").borderColor = 'rgba(255,245,46,1)';
+    // run the functions to set the opacity of the other buttons
+    notCorrectB();
+    notCorrectC();
+    notCorrectD();
+}
+// create a function to turn option button B to yellow when you win
+function youWinB() {
+    document.getElementById("optionB").style.background = 'rgba(255,245,46,1)';
+    document.getElementById("optionB").style["box-shadow"] = "0px 0px 70px 70px rgba(255,245,46,1)";
+    document.getElementById("optBInner").style.color = 'black';
+    document.getElementById("optionB").style.borderColor = 'rgba(255,245,46,1)';
+    notCorrectA();
+    notCorrectC();
+    notCorrectD();
+}
+function youWinC() {
+    document.getElementById("optionC").style.background = 'rgba(255,245,46,1)';
+    document.getElementById("optionC").style["box-shadow"] = "0px 0px 70px 70px rgba(255,245,46,1)";
+    document.getElementById("optCInner").style.color = 'black';
+    document.getElementById("optionC").style.borderColor = 'rgba(255,245,46,1)';
+    notCorrectA();
+    notCorrectB();
+    notCorrectD();
+}
+function youWinD() {
+    document.getElementById("optionD").style.background = 'rgba(255,245,46,1)';
+    document.getElementById("optionD").style["box-shadow"] = "0px 0px 70px 70px rgba(255,245,46,1)";
+    document.getElementById("optDInner").style.color = 'black';
+    document.getElementById("optionD").style.borderColor = 'rgba(255,245,46,1)';
+    notCorrectA();
+    notCorrectB();
+    notCorrectC();
+}
+// create functions to change the opacity of the incorrect option buttons
+function notCorrectA() {
+    // target the element and set the opacity
+    document.getElementById("optionA").style.opacity = '0.1';
+}
+function notCorrectB() {
+    document.getElementById("optionB").style.opacity = '0.1';
+}
+function notCorrectC() {
+    document.getElementById("optionC").style.opacity = '0.1';
+}
+function notCorrectD() {
+    document.getElementById("optionD").style.opacity = '0.1';
+}
+// create a function that changes the question box when you answer all questions correctly
+function youWin() {
+    // update the last score in the local storage
+    pushLast();
+    // check if its a highscore, set it if it is
+    checkHighscore();
+    // change the text of the submit button
+    submitButton.innerText="Congrats! '" + correctOpt + "' is correct! You have won!\nPress here to play again!";
+    // set youHaveWon to true so callNextQuestion knows its the last question
+    youHaveWon = true;
+    // target the submitbutton element
+    var changeToYellow = document.getElementById("submit");
+    // change the color to yellow
+    changeToYellow.style.background = 'rgba(255,245,46,1)';//'#F5C900';
+    // target the font-color element
+    var changeFontColor = document.getElementById("submitInner");
+    // change it to black so it will be visible
+    changeFontColor.style.color = 'black';
+    // change the border to black
+    document.getElementById("submit").style.borderColor = 'rgba(255,245,46,1)'; 
+    // add a borderglow to the yellow button
+    document.getElementById("submit").style["box-shadow"] = "0px 0px 70px 70px rgba(255,245,46,1)";
+    // change the opacity of the lifeline buttons so they appear to be behind the glow
+    document.getElementById("fiftyfifty").style.opacity = "0.1";
+    document.getElementById("hint").style.opacity = "0.1";
+}
 
 // create a function to reload the program if the answer is wrong
 function reloadProgram() {
@@ -2096,5 +2214,15 @@ function callNextQuestion() {
         randomQuestionTen();
         callQuestNine = false;
         plusTotal();
+    }
+    // else if (callQuestTen == true) {
+    //     youWin();
+    //     callQuestTen = false;
+    //     youHaveWon = true;
+    //     plusTotal();
+    // }
+    else if (youHaveWon == true) {
+        plusTotal();
+        reloadProgram();
     }
 }

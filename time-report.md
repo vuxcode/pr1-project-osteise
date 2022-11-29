@@ -49,5 +49,10 @@ For example:
   - Created functions and if and switch statements to check which option is the correct one and to by random remove two of the options.
   - Created a Hint button to be second type of lifeline (they will only be able to be used once each) these hints will be placed in each question functions to be able to be displayed. 
   - Wrote the code needed to disable and enable the hint buttons in between the questions, I don't want the users to burn the lifeline while "in between" questions is they press them by accident.
-2022-11-27 19:30 2 hours
+2022-11-27 19:30 worked for 2 hours
   - Created questions and hints for question two, three and four.
+2022-11-29 20:00 worked for 2 hours
+  - Started working with what happens when you answer question number 10 correct.
+  - Wrote the code needed so the program knows when you answer the last question correct.
+  - Changed so that the submit button is yellow and glows when you answer the last question correct.
+  - Added yellow glow to the correct option button when you win, and changed the opacity on the incorrect ones. 
