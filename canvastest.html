@@ -1,0 +1,31 @@
+<html>
+<!-- create a canvas element -->
+<canvas id="test"></canvas>
+</html>
+<script>
+// target the canvas element
+var canvas = document.getElementById("test");
+//get the 2d context of the canvas
+var ctx = canvas.getContext("2d");
+// clear the canvas
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//store a variable for the x coordinate
+var x = 0;
+// store the y coordinates
+y = 0;
+
+// create a function to update the position
+function update() {
+    // draw the square
+    ctx.fillRect(x, y, 10, 10);
+    // update the y-variable
+    // y += 1;
+    // update the x variable
+    x++;
+}
+
+// use the update function at 1 second and 30 fps
+var timer = setInterval(update, 1000/30);
+
+</script>
