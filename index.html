@@ -15,7 +15,7 @@
     </nav>
 </header>
 <main>
-    <div class="scroll-left"><p>You can only use 50/50 and Get a Hint! once each per game!</p></div>
+    <div class="scroll-left"><p>You have 30 seconds per question! You can only use 50/50 and Get a Hint! once each per game!</p></div>
     <section>
         <h1 id="level"></h1><br>
         <p id="qOneInner"></p><br>
@@ -28,6 +28,8 @@
         <button id="submit" onClick="callNextQuestion()"><p id="submitInner"></p></button>
         <button id="fiftyfifty" onClick="fiftyFifty()"><p id="fiftyInner"></p></button> 
         <button id="hint" onClick="getAHint()"><p id="hintInner"></p></button>
+        <!-- <div class="timerBox"><p id="timerInner"></p></div> -->
+        <canvas id="timerCanvas"></canvas>
     </article>
 </main>
 <footer>

@@ -1,3 +1,54 @@
+// create a variable to store a number for the timer
+var number = 30;
+// create a loop to count up
+function count() {
+    // output the number
+    console.log(number);
+    //update the number
+    number--;
+    // update the timer to run the count function again
+    timer = setTimeout(count, 1000);
+    // create an if statement so the loop knows when to stop
+    if (number == 0) {
+        // abort the question
+        abort();
+        // make it stop 
+        stop();
+    }
+}
+// create a function to make the timer loop stop
+function stop() {
+    number = 30;
+    // clear the timeout for the timer variable
+    clearTimeout(timer);
+    // output a message to say that the timer has stopped
+    console.log("timer stopped")
+}
+// create a variable to use so the callnextquestion knows that the time has ran out
+var timesUp = false;
+// create a function to abort the question if they run out of time
+function abort() {
+    // set the time up variable to true
+    timesUp = true;
+    // disable the option buttons
+    document.getElementById("optionA").disabled = true;
+    document.getElementById("optionB").disabled = true;
+    document.getElementById("optionC").disabled = true;
+    document.getElementById("optionD").disabled = true;
+    // disable the lifeline buttons
+    document.getElementById("fiftyfifty").disabled = true;
+    document.getElementById("hint").disabled = true;
+    // change the text on the submitbutton
+    document.getElementById("submitInner").innerText = "TIME IS UP!\nPress here to Play again!";
+    // enable the submitbutton
+    document.getElementById("submit").disabled = false;
+    // change the color of the enable button to red
+    document.getElementById("submit").style.background = '#AE2021';
+}
+// create a variable to target the timer box
+// var displayTime = document.getElementById("timerInner");
+// displayTime.innerHTML = number;
+
 // create variables and add the buttons
 var question = document.getElementById("qOneInner");
 var optA = document.getElementById("optAInner");
@@ -78,14 +129,14 @@ function plusTotal() {
     // save the total score to local storage
     localStorage.setItem("saved_total", total);
     // check the current total score
-    console.log(total);
+    // console.log(total);
 }
 // create function to get the saved total score
 function getScore() {
     // get the score from the local storage
     total = localStorage.getItem("saved_total");
     // display the current total score
-    console.log(total);
+    // console.log(total);
 }
 // run the function when the program starts
 getScore();
@@ -107,7 +158,7 @@ function getLastScore() {
     // get the highscore from the local storage
     lastScore = localStorage.getItem("saved_last");
     // display the current score
-    console.log(lastScore);
+    // console.log(lastScore);
 }
 // load the highscore when the program loads
 getLastScore();
@@ -692,12 +743,18 @@ function randomQuestion() {
             questTen();
             break;  
         }     
+        // include the timer function
+        count();
     }
 // run the first random function generator when the program loads
 randomQuestion();
 
 // create function to check option A
 function checkAnswerA() {
+    // freeze the timer
+    freeze = true;
+    // stop and reset the timer
+    stop();
     // if the answer is incorrect
     if (optA == false) {
         // check it so that the button is working
@@ -752,6 +809,10 @@ function checkAnswerA() {
 }
 // create function to check option B
 function checkAnswerB() {
+    // freeze the timer
+    freeze = true;
+    // stop and reset the timer
+    stop();
     if (optB == false) {
         // check it so that the button is working
         console.log("That's incorrect..");
@@ -807,6 +868,10 @@ function checkAnswerB() {
 }
 // create function to check option C
 function checkAnswerC() {
+    // freeze the timer
+    freeze = true;
+    // stop and reset the timer
+    stop();
     if (optC == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2021');
@@ -851,6 +916,10 @@ function checkAnswerC() {
 }
 // create function to check option D
 function checkAnswerD() {
+    // freeze the timer
+    freeze = true;
+    // stop and reset the timer
+    stop();
     if (optD == false) {
         console.log("That's incorrect..");
         wrongColor('#AE2012');
@@ -1279,6 +1348,11 @@ function randomQuestionTwo() {
             questTenTwo();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 // QUESTION NUMBER THREE
 function questOneThree() {
@@ -1533,6 +1607,11 @@ function randomQuestionThree() {
             questTenThree();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 // QUESTION FOUR
 function questOneFour() {
@@ -1787,6 +1866,11 @@ function randomQuestionFour() {
             questTenFour();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 // QUESTION FIVE
 function questOneFive() {
@@ -1830,6 +1914,11 @@ function randomQuestionFive() {
             questOneFive();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 
 
@@ -1877,6 +1966,11 @@ function randomQuestionSix() {
             questOneSix();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 
 
@@ -1924,6 +2018,11 @@ function randomQuestionSeven() {
             questOneSeven();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 
 
@@ -1972,6 +2071,11 @@ function randomQuestionEight() {
             questOneEight();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 
 
@@ -2022,6 +2126,11 @@ function randomQuestionNine() {
             questOneNine();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 
 
@@ -2069,6 +2178,11 @@ function randomQuestionTen() {
             questOneTen();
             break;
     }
+    // include the timer function
+    count();
+    // set freeze to false and start the canvas function again
+    freeze = false;
+    updateX();
 }
 // create a function to turn option button A to yellow when you win
 function youWinA() {
@@ -2158,58 +2272,87 @@ function reloadProgram() {
 
 function callNextQuestion() {
     if (incorrect) {
-        reloadProgram();
         plusTotal();
+        reloadProgram();
+    }
+    else if (timesUp) {
+        plusTotal();
+        pushLast();
+        reloadProgram();
     }
     else if (callQuestOne == true) {
+        // set the x coordinates to 0
+        x = 0;
+        // clear the canvas
+        clearCanvas();
+        // reset the colors of the buttons
         resetColors();
+        // run the next question
         randomQuestionTwo();
+        // set question one variable to false so the program knows it has been used
         callQuestOne = false;
+        // add the total score to the local storage
         plusTotal();
     }
     else if (callQuestTwo == true) {
+        x = 0;
+        clearCanvas();
         resetColors();
         randomQuestionThree();
         callQuestTwo = false;
         plusTotal();
     }
     else if (callQuestThree == true) {
+        x = 0;
+        clearCanvas();
         resetColors();
         randomQuestionFour();
         callQuestThree = false;
         plusTotal();
     }
     else if (callQuestFour == true) {
+        x = 0;
+        clearCanvas();
         resetColors();
         randomQuestionFive();
         callQuestFour = false;
         plusTotal();
     }
     else if (callQuestFive == true) {
+        x = 0;
+        clearCanvas();
         resetColors();
         randomQuestionSix();
         callQuestFive = false;
         plusTotal();
     }
     else if (callQuestSix == true) {
+        x = 0;
+        clearCanvas();
         resetColors();
         randomQuestionSeven();
         callQuestSix = false;
         plusTotal();
     }
     else if (callQuestSeven == true) {
+        x = 0;
+        clearCanvas();
         resetColors();
         randomQuestionEight();
         callQuestSeven = false;
         plusTotal();
     }
     else if (callQuestEight == true) {
+        x = 0;
+        clearCanvas();
         resetColors();
         randomQuestionNine();
         callQuestEight = false;
         plusTotal();
     }
     else if (callQuestNine == true) {
+        x = 0;
+        clearCanvas();
         resetColors();
         randomQuestionTen();
         callQuestNine = false;
@@ -2226,3 +2369,31 @@ function callNextQuestion() {
         reloadProgram();
     }
 }
+// target the canvas element
+var canvas = document.getElementById("timerCanvas");
+// get the 2d context of the canvas and save it in a variable
+var ctx = canvas.getContext("2d");
+// set the color
+ctx.fillStyle = "#0077B8";
+// clear the canvas 
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+// create a function to clear the canvas
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+// create a variable to freeze the canvas
+var freeze = false;
+// store a variable for the x coordinates
+var x = 0;
+// create a function to update the position of the square on the canvas
+function updateX() {
+    // draw the line
+    ctx.fillRect(x, 0, 0.2, 150);
+    if (freeze == true) {
+        return;
+    }
+    // update the x variable
+    x += 0.0412;
+}
+// use the update function every second at 60fps
+var canvasTimer = setInterval(updateX, 200/60);

@@ -139,6 +139,25 @@ h1 {
     text-align: center;
     font-size: 200%;
 }
+.timerBox {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 3px solid #0077B8;
+    border-radius: 30px 30px 30px 30px;
+    background: #023E8A;
+    padding-top: 6px;
+    width: 100px;
+    height: 50px;
+    font-size: 150%;
+}
+#timerCanvas {
+    margin-top: 10px;
+    width: 800px;
+    height: 50px;
+    border: 3px solid #0077B8;
+    border-radius: 30px 30px 30px 30px;
+}
 
 /* SESSION STAT PAGE */
 .playStat {
@@ -211,7 +230,6 @@ h1 {
     background-image: linear-gradient(to left, #023E8A, #0077B8, #0077B8, #33b7ec);
     box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
-
 
 /* DROPDOWN MENU */
 .dropButton {

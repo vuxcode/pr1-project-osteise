@@ -56,3 +56,7 @@ For example:
   - Wrote the code needed so the program knows when you answer the last question correct.
   - Changed so that the submit button is yellow and glows when you answer the last question correct.
   - Added yellow glow to the correct option button when you win, and changed the opacity on the incorrect ones. 
+2022-11-30 19:00 worked for 3 hours
+  - Added a 20 second timer to the questions.
+  - Gonna start working on how to display the timer to the user. 
+  - Added a canvas to simulate a timer, I need to make it sync with the timer.
