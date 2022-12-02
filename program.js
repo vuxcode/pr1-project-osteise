@@ -1,5 +1,5 @@
 // create a variable to store a number for the timer
-var number = 30;
+var number = 31;
 // create a loop to count up
 function count() {
     // output the number
@@ -18,7 +18,7 @@ function count() {
 }
 // create a function to make the timer loop stop
 function stop() {
-    number = 30;
+    number = 31;
     // clear the timeout for the timer variable
     clearTimeout(timer);
     // output a message to say that the timer has stopped
@@ -2373,10 +2373,10 @@ function callNextQuestion() {
 var canvas = document.getElementById("timerCanvas");
 // get the 2d context of the canvas and save it in a variable
 var ctx = canvas.getContext("2d");
-// set the color
-ctx.fillStyle = "#0077B8";
 // clear the canvas 
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+// ctx.clearRect(0, 0, canvas.width, canvas.height);
+canvas.width = 800;
+canvas.height = 50;
 // create a function to clear the canvas
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -2384,16 +2384,24 @@ function clearCanvas() {
 // create a variable to freeze the canvas
 var freeze = false;
 // store a variable for the x coordinates
-var x = 0;
+var x = canvas.width / 30;
+var block = canvas.width / 30;
 // create a function to update the position of the square on the canvas
+// set the color
+ctx.fillStyle = '#0077B8';
 function updateX() {
-    // draw the line
-    ctx.fillRect(x, 0, 0.2, 150);
+    // console.log(x);
     if (freeze == true) {
         return;
     }
+    // change the color to red
+    if (x > 600) {
+        ctx.fillStyle = '#AE2021';
+    }
+    // draw the line
+    ctx.fillRect(0, 0, x, 150);
     // update the x variable
-    x += 0.0412;
+    x += block;
 }
-// use the update function every second at 60fps
-var canvasTimer = setInterval(updateX, 200/60);
+// use the update function every second at 30fps
+var canvasTimer = setInterval(updateX, 1000);
