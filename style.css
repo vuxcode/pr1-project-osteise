@@ -326,3 +326,24 @@ nav {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%)}
 }
+
+/* DARK AND LIGHTMODE */
+#dark-modeBtn {
+    background-color: transparent;
+    /* padding-left: 35px; */
+    width: 150px;
+    height: 100px;
+    border: 3px solid #0077B8;
+    border-radius: 30px 30px 30px 5px;
+    font-size: 125%;
+}
+#dark-modeBtn:hover {
+    background-color: #0077B8;
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.dark-mode {
+    background-image: linear-gradient(to right, #023E8A , #000000);
+}
+.light-mode {
+    background-image: linear-gradient(to right, #023E8A , #0077B8);
+}
