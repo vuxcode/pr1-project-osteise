@@ -1,15 +1,15 @@
 // create a variable for all artists to store in the localstorage
-var mj = 0;
-var acdc = 0;
-var bruce = 0;
-var abba = 0;
-var elvis = 0;
-var cash = 0;
-var mc = 0;
-var bob = 0;
-var elton = 0;
-var queen = 0;
-var beatles = 0;
+var mj;
+var acdc;
+var bruce;
+var abba;
+var elvis;
+var cash;
+var mc;
+var bob;
+var elton;
+var queen;
+var beatles;
 // create a function to push it into the localstorage
 function pushArtist() {
     // save it to the local storage
@@ -818,8 +818,6 @@ function checkAnswerA() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
-        // push the artist into the local storage
-        pushArtist();
         // check if its a new highscore
         checkHighscore();
         // change the text of the submit button
@@ -879,8 +877,6 @@ function checkAnswerB() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
-        // push the artist into the local storage
-        pushArtist();
         // check if its a new highscore
         checkHighscore();
         // change the text of the submit button
@@ -938,8 +934,6 @@ function checkAnswerC() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
-        // push the artist into the local storage
-        pushArtist();
         // check if its a new highscore
         checkHighscore();
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
@@ -990,8 +984,6 @@ function checkAnswerD() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
-        // push the artist into the local storage
-        pushArtist();
         // check if its a new highscore
         checkHighscore();
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";

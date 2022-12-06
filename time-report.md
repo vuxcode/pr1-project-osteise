@@ -60,6 +60,6 @@ For example:
   - Added a 20 second timer to the questions.
   - Gonna start working on how to display the timer to the user. 
   - Added a canvas to simulate a timer, I need to make it sync with the timer.
-2022-12-6 worked for
+2022-12-6 worked for 1 hour
   - Added a new box with the stats on the quiz page.
   - Added variables for every artist and stored it in the local storage.
