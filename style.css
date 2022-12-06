@@ -158,30 +158,6 @@ h1 {
     border: 3px solid #0077B8;
     border-radius: 30px 30px 30px 30px;
 }
-
-/* SESSION STAT PAGE */
-.playStat {
-    font-size: 200%;
-}
-/* #startGame:hover {
-    background: #0077B8;
-    color: #0096C7;
-} */
-.statHeader {
-    margin-top: 80px;
-}
-#totalStat,
-#lastScore,
-#highscoreText {
-    font-size: 150%;
-    text-align: left;
-    margin-left: 40px;
-}
-.sessionStatSection {
-    width: 400px;
-    height: 200px;
-    margin-top: 40px;
-}
 .fixedButton {
     background-size: 300% 100%;
     border: 3px solid #0077B8;

@@ -10,6 +10,24 @@ var bob;
 var elton;
 var queen;
 var beatles;
+// create a function to set the values to the values in the local storage
+function getArtists() {
+    mj = localStorage.getItem("saved_mj");
+    acdc = localStorage.getItem("saved_acdc");
+    bruce = localStorage.getItem("saved_bruce");
+    abba = localStorage.getItem("saved_abba");
+    elvis = localStorage.getItem("saved_elvis");
+    cash = localStorage.getItem("saved_cash");
+    mc = localStorage.getItem("saved_mc");
+    bob = localStorage.getItem("saved_bob");
+    elton = localStorage.getItem("saved_elton");
+    queen = localStorage.getItem("saved_queen");
+    beatles = localStorage.getItem("saved_beatles");
+}
+// run the function upon load
+getArtists();
+
+
 // create a function to push it into the localstorage
 function pushArtist() {
     // save it to the local storage
