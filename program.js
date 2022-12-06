@@ -24,6 +24,7 @@ function pushArtist() {
     localStorage.setItem("saved_elton", elton);
     localStorage.setItem("saved_queen", queen);
     localStorage.setItem("saved_beatles", beatles);
+    console.log("pushing artists");
 }
 
 // create a variable to store a number for the timer
@@ -2364,6 +2365,7 @@ function youWin() {
 // create a function to reload the program if the answer is wrong
 function reloadProgram() {
     document.location.reload();
+    pushArtist();
 }
 
 function callNextQuestion() {
