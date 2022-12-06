@@ -1,3 +1,31 @@
+// create a variable for all artists to store in the localstorage
+var mj = 0;
+var acdc = 0;
+var bruce = 0;
+var abba = 0;
+var elvis = 0;
+var cash = 0;
+var mc = 0;
+var bob = 0;
+var elton = 0;
+var queen = 0;
+var beatles = 0;
+// create a function to push it into the localstorage
+function pushArtist() {
+    // save it to the local storage
+    localStorage.setItem("saved_mj", mj);
+    localStorage.setItem("saved_acdc", acdc);
+    localStorage.setItem("saved_bruce", bruce);
+    localStorage.setItem("saved_abba", abba);
+    localStorage.setItem("saved_elvis", elvis);
+    localStorage.setItem("saved_cash", cash);
+    localStorage.setItem("saved_mc", mc);
+    localStorage.setItem("saved_bob", bob);
+    localStorage.setItem("saved_elton", elton);
+    localStorage.setItem("saved_queen", queen);
+    localStorage.setItem("saved_beatles", beatles);
+}
+
 // create a variable to store a number for the timer
 var number = 31;
 // create a loop to count up
@@ -165,7 +193,6 @@ getLastScore();
 
 // create a variable to store the highest score
 var highscore;
-
 // create a function with an if-statement to check if the lastscore is higher than the highscore
 function checkHighscore() {
     // get the saved highscore value from the local storage
@@ -176,6 +203,18 @@ function checkHighscore() {
         // store the new highscore in the local storage
         localStorage.setItem("saved_highscore", highscore);
     }
+}
+// run the function to get the highscore
+checkHighscore();
+
+// target the stats div element
+var statDiv = document.getElementById("stats");
+// set the text with your scores
+statDiv.innerText = "Your highscore is: " + highscore + ". Your last score was: " + lastScore + ". Your total number is: " + total + ".";
+// if this is the first time the user plays
+if (highscore && lastScore && total == 0) {
+    // output a text
+    statDiv.innerText = "Your session stats will be shown here!";
 }
 
 // create the submit button element
@@ -226,6 +265,8 @@ function questOne() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[2];
+    // update mj var
+    mj++;
 } 
 // create function to output question number two
 function questTwo() {
@@ -247,6 +288,7 @@ function questTwo() {
     optD = true;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
+    beatles++;
 } 
 // create question number three function
 function questThree() {
@@ -268,6 +310,7 @@ function questThree() {
     optD = false;
     // update the correctOpt to output the correct answer in submit button
     correctOpt = opt1[0];
+    cash++;
 }
 // create question number four function
 function questFour() {
@@ -291,6 +334,7 @@ function questFour() {
     optD = false;
     // update the correctOpt to output the correct answer in submit button
     correctOpt = opt1[0];
+    abba++;
 }
 // create question number five function
 function questFive() {
@@ -314,6 +358,7 @@ function questFive() {
     optD = false;
     // update the correctOpt to output the correct answer in submit button
     correctOpt = opt1[2];
+    bob++;
 }
 // create question number six function
 function questSix() {
@@ -337,6 +382,7 @@ function questSix() {
     optD = true;
     // update the correctOpt to output the correct answer if wrong answer is selected
     correctOpt = opt1[3];
+    acdc++;
 }
 // create question number seven function
 function questSeven() {
@@ -360,6 +406,7 @@ function questSeven() {
     optD = false;
     // update the correctOpt output to the correct answer
     correctOpt = opt1[1];
+    bruce++;
 }
 // create question number eight function
 function questEight() {
@@ -383,6 +430,7 @@ function questEight() {
     optD = false;
     // update the correctOpt output to be the correct answer
     correctOpt = opt1[1];
+    elton++;
 }
 // create the question number nine function
 function questNine() {
@@ -406,6 +454,7 @@ function questNine() {
     optD = false;
     // update the correctOpt output to be the correct answer
     correctOpt = opt1[3];
+    queen++;
 }
 function questTen() {
     // create the question output
@@ -428,6 +477,7 @@ function questTen() {
     optD = false;
     // update the correctOpt output to be the correct answer
     correctOpt = opt1[0];
+    mc++;
 }
 // create a function that replaces the text in the submit button with a hint
 function getAHint() {
@@ -767,6 +817,8 @@ function checkAnswerA() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
+        // push the artist into the local storage
+        pushArtist();
         // check if its a new highscore
         checkHighscore();
         // change the text of the submit button
@@ -785,6 +837,8 @@ function checkAnswerA() {
         youWin();
         // enable the submit button
         submit.disabled = false;
+        // push the artist into the local storage
+        pushArtist();
     }
     // if the answer is correct
     else if (optA) {
@@ -824,6 +878,8 @@ function checkAnswerB() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
+        // push the artist into the local storage
+        pushArtist();
         // check if its a new highscore
         checkHighscore();
         // change the text of the submit button
@@ -842,6 +898,8 @@ function checkAnswerB() {
         youWin();
         // enable the submit button
         submit.disabled = false;
+        // push the artist into the local storage
+        pushArtist();
     }
     else if (optB) {
         // check it so that the button is working
@@ -879,6 +937,8 @@ function checkAnswerC() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
+        // push the artist into the local storage
+        pushArtist();
         // check if its a new highscore
         checkHighscore();
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
@@ -894,6 +954,8 @@ function checkAnswerC() {
         youWin();
         // enable the submit button
         submit.disabled = false;
+        // push the artist into the local storage
+        pushArtist();
     }
     else if (optC) {
         console.log("That's correct!");
@@ -927,6 +989,8 @@ function checkAnswerD() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
+        // push the artist into the local storage
+        pushArtist();
         // check if its a new highscore
         checkHighscore();
         submitInner.innerText="That is incorrect.. The correct answer is " +  "'" + correctOpt + "'..\nYou had " + score + " correct answers. Press this button to play again!";
@@ -942,6 +1006,8 @@ function checkAnswerD() {
         youWin();
         // enable the submit button
         submit.disabled = false;
+        // push the artist into the local storage
+        pushArtist();
     }
     else if (optD) {
         console.log("That's correct!");
@@ -1117,6 +1183,7 @@ function questOneTwo() {
     optD = true;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
+    acdc++;
 }
 function questTwoTwo() {
     // create the question output
@@ -1138,6 +1205,7 @@ function questTwoTwo() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    abba++;
 }
 function questThreeTwo() {
     // create the question output
@@ -1159,6 +1227,7 @@ function questThreeTwo() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[0];
+    mj++;
 }
 function questFourTwo() {
     // create the question output
@@ -1180,6 +1249,7 @@ function questFourTwo() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[0];
+    bruce++;
 }
 function questFiveTwo() {
     // create the question output
@@ -1201,6 +1271,7 @@ function questFiveTwo() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[0];
+    queen++;
 }
 function questSixTwo() {
     // create the question output
@@ -1222,6 +1293,7 @@ function questSixTwo() {
     optD = true;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
+    elton++;
 }
 function questSevenTwo() {
     // create the question output
@@ -1243,6 +1315,7 @@ function questSevenTwo() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[2];
+    bob++;
 }
 function questEightTwo() {
     // create the question output
@@ -1264,6 +1337,7 @@ function questEightTwo() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    mc++;
 }
 function questNineTwo() {
     // create the question output
@@ -1285,6 +1359,7 @@ function questNineTwo() {
     optD = true;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
+    elvis++;
 }
 function questTenTwo() {
     // create the question output
@@ -1306,6 +1381,7 @@ function questTenTwo() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[2];
+    cash++;
 }
 function randomQuestionTwo() {    
     // change the level number to 2
@@ -1375,6 +1451,7 @@ function questOneThree() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[2];
+    mj++;
 }
 function questTwoThree() {
     // create the question output
@@ -1396,6 +1473,7 @@ function questTwoThree() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    abba++;
 }
 function questThreeThree() {
     // create the question output
@@ -1417,6 +1495,7 @@ function questThreeThree() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[2];
+    elvis++;
 }
 function questFourThree() {
     // create the question output
@@ -1438,6 +1517,7 @@ function questFourThree() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    bob++;
 }
 function questFiveThree() {
     // create the question output
@@ -1459,6 +1539,7 @@ function questFiveThree() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[0];
+    bruce++;
 }
 function questSixThree() {
     // create the question output
@@ -1480,6 +1561,7 @@ function questSixThree() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[2];
+    queen++;
 }
 function questSevenThree() {
     // create the question output
@@ -1501,6 +1583,7 @@ function questSevenThree() {
     optD = true;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
+    elton++;
 }
 function questEightThree() {
     // create the question output
@@ -1522,6 +1605,7 @@ function questEightThree() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[0];
+    cash++;
 }
 function questNineThree() {
     // create the question output
@@ -1543,6 +1627,7 @@ function questNineThree() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    mc++;
 }
 function questTenThree() {
     // create the question output
@@ -1564,6 +1649,7 @@ function questTenThree() {
     optD = true;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
+    acdc++;
 }
 // create random question generator for question three
 function randomQuestionThree() {    
@@ -1634,6 +1720,7 @@ function questOneFour() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[0];
+    mj++;
 }
 function questTwoFour() {
     // create the question output
@@ -1655,6 +1742,7 @@ function questTwoFour() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    abba++;
 }
 function questThreeFour() {
     // create the question output
@@ -1676,6 +1764,7 @@ function questThreeFour() {
     optD = true;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[3];
+    elvis++;
 }
 function questFourFour() {
    // create the question output
@@ -1697,6 +1786,7 @@ function questFourFour() {
    optD = false;
    //update correctOpt with the correct option to output when incorrect option is chosen
    correctOpt = opt1[0];
+   acdc++;
 }
 function questFiveFour() {
    // create the question output
@@ -1718,6 +1808,7 @@ function questFiveFour() {
    optD = false;
    //update correctOpt with the correct option to output when incorrect option is chosen
    correctOpt = opt1[1];
+   bob++;
 }
 function questSixFour() {
    // create the question output
@@ -1739,6 +1830,7 @@ function questSixFour() {
    optD = false;
    //update correctOpt with the correct option to output when incorrect option is chosen
    correctOpt = opt1[2];
+   bruce++;
 }
 function questSevenFour() {
    // create the question output
@@ -1760,6 +1852,7 @@ function questSevenFour() {
    optD = true;
    //update correctOpt with the correct option to output when incorrect option is chosen
    correctOpt = opt1[3];
+   queen++;
 }
 function questEightFour() {
    // create the question output
@@ -1781,6 +1874,7 @@ function questEightFour() {
    optD = true;
    //update correctOpt with the correct option to output when incorrect option is chosen
    correctOpt = opt1[3];
+   elton++;
 }
 function questNineFour() {
    // create the question output
@@ -1802,6 +1896,7 @@ function questNineFour() {
    optD = false;
    //update correctOpt with the correct option to output when incorrect option is chosen
    correctOpt = opt1[1];
+   cash++;
 }
 function questTenFour() {
    // create the question output
@@ -1823,6 +1918,7 @@ function questTenFour() {
    optD = true;
    //update correctOpt with the correct option to output when incorrect option is chosen
    correctOpt = opt1[3];
+   mc++;
 }
 // create random question generator for question four
 function randomQuestionFour() {    
