@@ -212,10 +212,15 @@ getLastScore();
 
 // create a variable to store the highest score
 var highscore;
+// fetch highscore from local storage
+function getHighscore() {
+    highscore = localStorage.getItem("saved_highscore");
+}
+getHighscore();
 // create a function with an if-statement to check if the lastscore is higher than the highscore
 function checkHighscore() {
     // get the saved highscore value from the local storage
-    highscore = localStorage.getItem("saved_highscore");
+    // highscore = localStorage.getItem("saved_highscore");
     // if the last score is higher than the highscore, make it the new highscore
     if (lastScore > highscore) {
         highscore = lastScore;
@@ -223,8 +228,6 @@ function checkHighscore() {
         localStorage.setItem("saved_highscore", highscore);
     }
 }
-// run the function to get the highscore
-checkHighscore();
 
 // target the stats div element
 var statDiv = document.getElementById("stats");
