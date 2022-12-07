@@ -222,8 +222,8 @@ function checkHighscore() {
     // get the saved highscore value from the local storage
     // highscore = localStorage.getItem("saved_highscore");
     // if the last score is higher than the highscore, make it the new highscore
-    if (lastScore > highscore) {
-        highscore = lastScore;
+    if (score > highscore) {
+        highscore = score;
         // store the new highscore in the local storage
         localStorage.setItem("saved_highscore", highscore);
     }
