@@ -1,7 +1,8 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html><html lang="en">
 <head>
     <title>Questions</title>
     <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
 </head>
 <body>
 <header>
@@ -13,7 +14,9 @@
             <a href="https://vuxcode.github.io/we1-project-osteise/contact.html">Contact</a>
         </nav>
     </nav>
-    <button id="dark-modeBtn" onClick="darkmode()"><p id="mode"></p></button>
+    <button id="dark-modeBtn" onClick="darkmode()">
+        <span id="mode"></span>
+    </button>
 </header>
 <main>
     <div id="stats"><p id="hsInner"></p><p id="lsInner"></p><p id="totInner"></p></div>
@@ -21,15 +24,15 @@
     <section>
         <h1 id="level"></h1><br>
         <p id="qOneInner"></p><br>
-        <button id="optionA" onClick="checkAnswerA()"><p id="optAInner"></p></button>
-        <button id="optionB" onClick="checkAnswerB()"><p id="optBInner"></p></button><br>
-        <button id="optionC" onClick="checkAnswerC()"><p id="optCInner"></p></button>
-        <button id="optionD" onClick="checkAnswerD()"><p id="optDInner"></p></button>
+        <button id="optionA" onClick="checkAnswerA()"><span id="optAInner"></span></button>
+        <button id="optionB" onClick="checkAnswerB()"><span id="optBInner"></span></button><br>
+        <button id="optionC" onClick="checkAnswerC()"><span id="optCInner"></span></button>
+        <button id="optionD" onClick="checkAnswerD()"><span id="optDInner"></span></button>
     </section>
     <article>
-        <button id="submit" onClick="callNextQuestion()"><p id="submitInner"></p></button>
-        <button id="fiftyfifty" onClick="fiftyFifty()"><p id="fiftyInner"></p></button> 
-        <button id="hint" onClick="getAHint()"><p id="hintInner"></p></button>
+        <button id="submit" onClick="callNextQuestion()"><span id="submitInner"></span></button>
+        <button id="fiftyfifty" onClick="fiftyFifty()"><span id="fiftyInner"></span></button> 
+        <button id="hint" onClick="getAHint()"><span id="hintInner"></span></button>
         <!-- <div class="timerBox"><p id="timerInner"></p></div> -->
         <canvas id="timerCanvas"></canvas>
     </article>

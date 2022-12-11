@@ -64,3 +64,5 @@ For example:
   - Added a new box with the stats on the quiz page.
   - Added variables for every artist and stored it in the local storage.
   - Fixed some bugs with localstorage not storing highscore as it should
+2022-12-10 23:00 worked for 2 hours
+  - Added more questions and changed some code

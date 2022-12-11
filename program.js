@@ -91,6 +91,8 @@ function abort() {
     document.getElementById("submit").disabled = false;
     // change the color of the enable button to red
     document.getElementById("submit").style.background = '#AE2021';
+    // push artists 
+    pushArtist();
 }
 // create a variable to target the timer box
 // var displayTime = document.getElementById("timerInner");
@@ -175,15 +177,11 @@ function plusTotal() {
     total++;
     // save the total score to local storage
     localStorage.setItem("saved_total", total);
-    // check the current total score
-    // console.log(total);
 }
 // create function to get the saved total score
 function getScore() {
     // get the score from the local storage
     total = localStorage.getItem("saved_total");
-    // display the current total score
-    // console.log(total);
 }
 // run the function when the program starts
 getScore();
@@ -204,8 +202,6 @@ function pushLast() {
 function getLastScore() {
     // get the highscore from the local storage
     lastScore = localStorage.getItem("saved_last");
-    // display the current score
-    // console.log(lastScore);
 }
 // load the highscore when the program loads
 getLastScore();
@@ -219,8 +215,6 @@ function getHighscore() {
 getHighscore();
 // create a function with an if-statement to check if the lastscore is higher than the highscore
 function checkHighscore() {
-    // get the saved highscore value from the local storage
-    // highscore = localStorage.getItem("saved_highscore");
     // if the last score is higher than the highscore, make it the new highscore
     if (score > highscore) {
         highscore = score;
@@ -839,6 +833,8 @@ function checkAnswerA() {
         findAnswer();
         // push the score in to the highscore array
         pushLast();
+        // push artists
+        pushArtist();
         // check if its a new highscore
         checkHighscore();
         // change the text of the submit button
@@ -905,6 +901,8 @@ function checkAnswerB() {
         submit.disabled = false;
         // set incorrect to true, so the program knows it needs to end
         incorrect = true;
+        // push artists
+        pushArtist();
     }
     // else if its the last question
     else if (youHaveWon) {
@@ -961,6 +959,8 @@ function checkAnswerC() {
         submit.disabled = false;
         // set incorrect to true, so the program knows it needs to end
         incorrect = true;
+        // push artists
+        pushArtist();
     }
     // else if its the last question
     else if (youHaveWon) {
@@ -1011,6 +1011,8 @@ function checkAnswerD() {
         submit.disabled = false;
         // set incorrect to true, so the program knows it needs to end
         incorrect = true;
+        // push artists
+        pushArtist();
     }
     // else if its the last question
     else if (youHaveWon) {
@@ -1985,26 +1987,47 @@ function randomQuestionFour() {
 // QUESTION FIVE
 function questOneFive() {
     // create the question output
-    var q1 = ("QUESTION");
+    var q1 = ("Which of Michael Jacksons albums sold the most copies?");
     question.innerText=q1;
-    
     // create the option outputs
-    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    var opt1 = ["Off the Wall", "Bad", "Got to Be There", "Thriller"];
     // update the outputs
     optAInner.innerText=opt1[0];
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
     // change the variables to the correct/incorrect answers
     optA = false;
-    optB = true;
+    optB = false;
+    optC = false;
+    optD = true;
+    // create a hint
+    hint = "It was released 1982.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+    mj++;
+}
+function questTwoFive() {
+    // create the question output
+    var q1 = ("Which of ABBA's studio albums sold most copies?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Arrival", "Waterloo", "Voulez-Vous", "Super Trouper"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
     optC = false;
     optD = false;
-    
+    // create a hint
+    hint = "It was released 1976.";
     //update correctOpt with the correct option to output when incorrect option is chosen
-    correctOpt = opt1[1];
+    correctOpt = opt1[0];
+    abba++;
 }
 
 // create random question generator for question five
@@ -2015,13 +2038,16 @@ function randomQuestionFive() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 5
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 2);
     callQuestFive = true;
 
     // put in the question functions
     switch(random) {
         case 0:
             questOneFive();
+            break;
+        case 1:
+            questTwoFive();
             break;
     }
     // include the timer function
@@ -2031,32 +2057,51 @@ function randomQuestionFive() {
     updateX();
 }
 
-
-
 // QUESTION SIX
 
 function questOneSix() {
     // create the question output
-    var q1 = ("FRÅGA");
+    var q1 = ("What song is not made by Michael Jackson?");
     question.innerText=q1;
-    
     // create the option outputs
-    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    var opt1 = ["Man In the Mirror", "Nothing Compares 2 U", "Human Nature", "Baby Be Mine"];
     // update the outputs
     optAInner.innerText=opt1[0];
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
     // change the variables to the correct/incorrect answers
     optA = false;
     optB = true;
     optC = false;
     optD = false;
-    
+    // create a hint
+    hint = "One of these songs are made by Prince.";
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    mj++;
+}
+function questTwoSix() {
+    // create the question output
+    var q1 = ("What song is not made by ABBA?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Fernando", "Take a Chance On Me", "If I Could Turn Back Time", "Knowing Me, Knowing You"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    // create a hint
+    hint = "One of these songs are made by Cher.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    abba++;
 }
 
 // create random question generator for question six
@@ -2067,13 +2112,16 @@ function randomQuestionSix() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 6
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 2);
     callQuestSix = true;
 
     // put in the question functions
     switch(random) {
         case 0:
             questOneSix();
+            break;
+        case 1:    
+            questTwoSix();
             break;
     }
     // include the timer function
@@ -2084,31 +2132,51 @@ function randomQuestionSix() {
 }
 
 
-
 // QUESTION SEVEN
 
 function questOneSeven() {
     // create the question output
-    var q1 = ("FRÅGA");
+    var q1 = ("What song was Michael Jacksons US #1 Billboard hit the longest?");
     question.innerText=q1;
-    
     // create the option outputs
-    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    var opt1 = ["Beat It", "Billie Jean", "Bad", "Black or White"];
     // update the outputs
     optAInner.innerText=opt1[0];
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
     // change the variables to the correct/incorrect answers
     optA = false;
-    optB = true;
+    optB = false;
+    optC = false;
+    optD = true;
+    // create a hint
+    hint = "It held the US #1 Billboard spot for 7 weeks in 1991.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+    mj++;
+}
+function questTwoSeven() {
+    // create the question output
+    var q1 = ("What song won ABBA the Eurovision Song Contest in 1974?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Waterloo", "Gimme! Gimme! Gimme!", "Mamma Mia", "Dancing Queen"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
     optC = false;
     optD = false;
-    
+    // create a hint
+    hint = "A famous battle shares the same name as the song.";
     //update correctOpt with the correct option to output when incorrect option is chosen
-    correctOpt = opt1[1];
+    correctOpt = opt1[0];
+    abba++;
 }
 
 // create random question generator for question four
@@ -2119,13 +2187,16 @@ function randomQuestionSeven() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 7
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 2);
     callQuestSeven = true;
 
     // put in the question functions
     switch(random) {
         case 0:
             questOneSeven();
+            break;
+        case 1:
+            questTwoSeven();
             break;
     }
     // include the timer function
@@ -2142,26 +2213,47 @@ function randomQuestionSeven() {
 
 function questOneEight() {
     // create the question output
-    var q1 = ("FRÅGA");
+    var q1 = ("What was the name of the first record label that signed Michael Jackson?");
     question.innerText=q1;
-    
     // create the option outputs
-    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    var opt1 = ["Motown", "Universal", "Epic", "Columbia"];
     // update the outputs
     optAInner.innerText=opt1[0];
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "It was founded in Detroit in 1958.";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+    mj++;
+}
+function questTwoEight() {
+    // create the question output
+    var q1 = ("Which ABBA album came first?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["ABBA", "Ring Ring", "Waterloo", "Arrival"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "The song which named the album was released in several different languages.";
     // change the variables to the correct/incorrect answers
     optA = false;
     optB = true;
     optC = false;
     optD = false;
-    
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    abba++;ß
 }
 
 // create random question generator for question 8
@@ -2172,13 +2264,16 @@ function randomQuestionEight() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 8
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 2);
     callQuestEight = true;
 
     // put in the question functions
     switch(random) {
         case 0:
             questOneEight();
+            break;
+        case 1:
+            questTwoEight();
             break;
     }
     // include the timer function
@@ -2197,26 +2292,47 @@ function randomQuestionEight() {
 
 function questOneNine() {
     // create the question output
-    var q1 = ("FRÅGA");
+    var q1 = ("Which of Michael Jacksons brothers was not originally in Jackson 5?");
     question.innerText=q1;
-    
     // create the option outputs
-    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    var opt1 = ["Tito", "Randy", "Jackie", "Jermaine"];
     // update the outputs
     optAInner.innerText=opt1[0];
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "One of them joined when Michael Jackson left to pursue his solo career.";
     // change the variables to the correct/incorrect answers
     optA = false;
     optB = true;
     optC = false;
     optD = false;
-    
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
+    mj++;
+}
+function questTwoNine() {
+    // create the question output
+    var q1 = ("What year did ABBA end their last tour?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["1978", "1979", "1980", "1981"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was 198*";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    abba++;
 }
 
 // create random question generator for question 9
@@ -2227,13 +2343,16 @@ function randomQuestionNine() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 9
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 2);
     callQuestNine = true;
 
     // put in the question functions
     switch(random) {
         case 0:
             questOneNine();
+            break;
+        case 1:
+            questTwoNine();
             break;
     }
     // include the timer function
@@ -2248,27 +2367,51 @@ function randomQuestionNine() {
 
 function questOneTen() {
     // create the question output
-    var q1 = ("FRÅGA");
+    var q1 = ("Which of these songs were not a single on a Michael Jackson album?");
     question.innerText=q1;
-    
     // create the option outputs
-    var opt1 = ["FEL", "KORREKT", "Fel", "Fel"];
+    var opt1 = ["Will You Be There", "Rock With You", "Human Nature", "Man in the Mirror"];
     // update the outputs
     optAInner.innerText=opt1[0];
     optBInner.innerText=opt1[1];
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
-    
-    
+    // create a hint
+    hint = "The song we are looking for was on the album 'Thriller', but was not a single.";
     // change the variables to the correct/incorrect answers
     optA = false;
-    optB = true;
+    optB = false;
+    optC = true;
+    optD = false;
+    // set youHaveWon to the correct option so we know they have won
+    youHaveWon = optC;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    mj++;
+}
+function questTwoTen() {
+    // create the question output
+    var q1 = ("What ABBA album includes the song 'King Kong Song'?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Waterloo", "Arrival", "Voyage", "The Album"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "The song we are looking for was on the album 'Thriller', but was not a single.";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
     optC = false;
     optD = false;
     // set youHaveWon to the correct option so we know they have won
-    youHaveWon = optB;
+    youHaveWon = optA;
     //update correctOpt with the correct option to output when incorrect option is chosen
-    correctOpt = opt1[1];
+    correctOpt = opt1[0];
+    abba++;
 }
 
 // create random question generator for question ten
@@ -2279,13 +2422,16 @@ function randomQuestionTen() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 10
-    var random = Math.floor(Math.random() * 1);
+    var random = Math.floor(Math.random() * 2);
     callQuestTen = true;
 
     // put in the question functions
     switch(random) {
         case 0:
             questOneTen();
+            break;
+        case 1:
+            questTwoTen();
             break;
     }
     // include the timer function
@@ -2354,10 +2500,25 @@ function youWin() {
     pushLast();
     // check if its a highscore, set it if it is
     checkHighscore();
+    // push artists
+    pushArtist();
     // change the text of the submit button
     submitButton.innerText="Congrats! '" + correctOpt + "' is correct! You have won!\nPress here to play again!";
     // set youHaveWon to true so callNextQuestion knows its the last question
     youHaveWon = true;
+    // run an if statement to check what button should be highlighted yellow
+    if (optA) {
+        youWinA();
+    }
+    else if(optB) {
+        youWinB();
+    }
+    else if (optC) {
+        youWinC();
+    }
+    else if (optD) {
+        youWinD();
+    }
     // target the submitbutton element
     var changeToYellow = document.getElementById("submit");
     // change the color to yellow
@@ -2378,7 +2539,7 @@ function youWin() {
 // create a function to reload the program if the answer is wrong
 function reloadProgram() {
     document.location.reload();
-    pushArtist();
+    // pushArtist();
 }
 
 function callNextQuestion() {
@@ -2506,10 +2667,10 @@ function updateX() {
         return;
     }
     // change the color to red
-    if (x > 600) {
+    if (x > 650) {
         ctx.fillStyle = '#AE2021';
     }
-    if (x < 600) {
+    if (x < 650) {
         ctx.fillStyle = '#0077B8';
     }
     // draw the line
@@ -2519,7 +2680,6 @@ function updateX() {
 }
 // use the update function every second at 30fps
 var canvasTimer = setInterval(updateX, 1000);
-
 
 // target the mode button element
 var modeBtn = document.getElementById("mode");
