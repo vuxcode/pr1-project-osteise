@@ -66,3 +66,5 @@ For example:
   - Fixed some bugs with localstorage not storing highscore as it should
 2022-12-10 23:00 worked for 2 hours
   - Added more questions and changed some code
+2022-12-11 12:30 worked for 1 hour
+  - Added more questions.

@@ -2029,6 +2029,28 @@ function questTwoFive() {
     correctOpt = opt1[0];
     abba++;
 }
+function questThreeFive() {
+    // create the question output
+    var q1 = ("Which of Elvis studio albums sold most copies?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Elvis.", "Elvis Is Back!", "Elvis' Christmas Album", "King Creole"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    // create a hint
+    hint = "It was a holiday themed album.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    elvis++;
+}
 
 // create random question generator for question five
 
@@ -2038,7 +2060,7 @@ function randomQuestionFive() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 5
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     callQuestFive = true;
 
     // put in the question functions
@@ -2048,6 +2070,9 @@ function randomQuestionFive() {
             break;
         case 1:
             questTwoFive();
+            break;
+        case 2:
+            questThreeFive();
             break;
     }
     // include the timer function
@@ -2103,6 +2128,28 @@ function questTwoSix() {
     correctOpt = opt1[2];
     abba++;
 }
+function questThreeSix() {
+    // create the question output
+    var q1 = ("What song is not made by Elvis?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Love Me Tender", "Great Balls of Fire", "Blue Suede Shoes", "My Baby Left Me"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    // create a hint
+    hint = "One of these songs are made by Jerry Lee Lewis.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+    elvis++;
+}
 
 // create random question generator for question six
 
@@ -2112,7 +2159,7 @@ function randomQuestionSix() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 6
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     callQuestSix = true;
 
     // put in the question functions
@@ -2122,6 +2169,9 @@ function randomQuestionSix() {
             break;
         case 1:    
             questTwoSix();
+            break;
+        case 2:
+            questThreeSix();
             break;
     }
     // include the timer function
@@ -2178,6 +2228,29 @@ function questTwoSeven() {
     correctOpt = opt1[0];
     abba++;
 }
+function questThreeSeven() {
+    // create the question output
+    var q1 = ("What song won Elvis the 'Best Insipirational Performance' grammy in 1972?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["He Touched Me", "How Great Thou Art", "I Was the One", "Suspicious Minds"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    // create a hint
+    hint = "It's either 'He Touched Me' or 'Suspicious Minds'";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+    elvis++;
+}
+
 
 // create random question generator for question four
 
@@ -2187,7 +2260,7 @@ function randomQuestionSeven() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 7
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     callQuestSeven = true;
 
     // put in the question functions
@@ -2197,6 +2270,9 @@ function randomQuestionSeven() {
             break;
         case 1:
             questTwoSeven();
+            break;
+        case 2:
+            questThreeSeven();
             break;
     }
     // include the timer function
@@ -2253,7 +2329,29 @@ function questTwoEight() {
     optD = false;
     //update correctOpt with the correct option to output when incorrect option is chosen
     correctOpt = opt1[1];
-    abba++;ß
+    abba++;
+}
+function questThreeEight() {
+    // create the question output
+    var q1 = ("Which Elvis Presley album came first?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Elvis Presley", "Loving You", "Elvis", "King Creole"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was a studio album released in 1956, and his name is in the title";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+    elvis++;
 }
 
 // create random question generator for question 8
@@ -2264,7 +2362,7 @@ function randomQuestionEight() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 8
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     callQuestEight = true;
 
     // put in the question functions
@@ -2274,6 +2372,9 @@ function randomQuestionEight() {
             break;
         case 1:
             questTwoEight();
+            break;
+        case 2:
+            questThreeEight();
             break;
     }
     // include the timer function
@@ -2334,6 +2435,28 @@ function questTwoNine() {
     correctOpt = opt1[2];
     abba++;
 }
+function questThreeNine() {
+    // create the question output
+    var q1 = ("What Las Vegas hotel did Elvis Presley perform 636 times on?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Caesar's Palace", "New Frontier Hotel & Casino", "The Las Vegas Convention Center", "International Hotel"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "it later became a Hilton hotel and is now called Westgate Las Vegas Resort & Casino.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+    elvis++;
+}
 
 // create random question generator for question 9
 
@@ -2343,7 +2466,7 @@ function randomQuestionNine() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 9
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     callQuestNine = true;
 
     // put in the question functions
@@ -2353,6 +2476,9 @@ function randomQuestionNine() {
             break;
         case 1:
             questTwoNine();
+            break;
+        case 2:
+            questThreeNine();
             break;
     }
     // include the timer function
@@ -2401,7 +2527,7 @@ function questTwoTen() {
     optCInner.innerText=opt1[2];
     optDInner.innerText=opt1[3];
     // create a hint
-    hint = "The song we are looking for was on the album 'Thriller', but was not a single.";
+    hint = "It was released in 1974.";
     // change the variables to the correct/incorrect answers
     optA = true;
     optB = false;
@@ -2413,6 +2539,30 @@ function questTwoTen() {
     correctOpt = opt1[0];
     abba++;
 }
+function questThreeTen() {
+    // create the question output
+    var q1 = ("Which song is not a christmas song made by Elvis Presley?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Santa Claus Is Back In Town", "Jingle Bells", "Here Comes Santa Claus", "Santa Bring My Baby Back"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "One of theese songs are made by Frank Sinatra.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    // set youHaveWon to the correct option so we know they have won
+    youHaveWon = optB;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+    elvis++;
+}
 
 // create random question generator for question ten
 
@@ -2422,7 +2572,7 @@ function randomQuestionTen() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 10
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     callQuestTen = true;
 
     // put in the question functions
@@ -2432,6 +2582,9 @@ function randomQuestionTen() {
             break;
         case 1:
             questTwoTen();
+            break;
+        case 2: 
+            questThreeTen();
             break;
     }
     // include the timer function
