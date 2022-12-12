@@ -8,12 +8,12 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 # Project Notes
 
-> You can use this section of the file to keep notes about your project as you work on it.
+> You can see my notes under the bug-list and the time-report.
 
 # Project Summary
 
-> Before the final submission date you should include a "PROJECT SUMMARY" in this section here. 
+> I have created a music quiz program. There has been some issues along the way, but I have been able to solve them, so the program should work as expected. 
 
 # User Guide
 
-> Write a clear user guide for how someone should use your program.
+> There are 10 different levels, each level has different questions, and they will be chosen by random. There are a hint button and a 50/50 button, the hint will provide a hint for the question, and the 50/50 button will remove two of the wrong options. These can only be used once (you can use both once) each game, then they will be disabled. After you have finished playing, you can see your statistics under the 'Session Statistics' page on the home screen. 
