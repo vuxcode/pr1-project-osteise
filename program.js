@@ -2031,7 +2031,7 @@ function questTwoFive() {
 }
 function questThreeFive() {
     // create the question output
-    var q1 = ("Which of Elvis studio albums sold most copies?");
+    var q1 = ("Which of Elvis Presley's studio albums sold most copies?");
     question.innerText=q1;
     // create the option outputs
     var opt1 = ["Elvis.", "Elvis Is Back!", "Elvis' Christmas Album", "King Creole"];
@@ -2051,6 +2051,72 @@ function questThreeFive() {
     correctOpt = opt1[2];
     elvis++;
 }
+function questFourFive() {
+    // create the question output
+    var q1 = ("Which of AC/DC's albums sold most copies?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Highway to Hell", "Back in Black", "High Voltage", "Let There Be Rock"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    // create a hint
+    hint = "It was released 1980, and the titel song is one of their biggest hits";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+    acdc++;
+}
+function questFiveFive() {
+    // create the question output
+    var q1 = ("Which of Bob Marley's albums sold most copies?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Gold", "The Wailing Wailers", "Catch a Fire", "Legend"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    // create a hint
+    hint = "It was a greatest hits album that was realesed after he passed away";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+    bob++;
+}
+function questSixFive() {
+    // create the question output
+    var q1 = ("Which of Bruce Springsteen's albums sold most copies?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Greatest Hits", "Born In The USA", "Live: 1975-1985", "Born To Run"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    // create a hint
+    hint = "It wasn't a collection or a live album.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+    bruce++;
+}
 
 // create random question generator for question five
 
@@ -2060,7 +2126,7 @@ function randomQuestionFive() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 5
-    var random = Math.floor(Math.random() * 3);
+    var random = Math.floor(Math.random() * 6);
     callQuestFive = true;
 
     // put in the question functions
@@ -2073,6 +2139,15 @@ function randomQuestionFive() {
             break;
         case 2:
             questThreeFive();
+            break;
+        case 3:
+            questFourFive();
+            break;
+        case 4:
+            questFiveFive();
+            break;
+        case 5:
+            questSixFive();
             break;
     }
     // include the timer function
@@ -2150,6 +2225,72 @@ function questThreeSix() {
     correctOpt = opt1[1];
     elvis++;
 }
+function questFourSix() {
+    // create the question output
+    var q1 = ("What song is not made by AC/DC?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Live Wire", "T.N.T", "Let There Be Rock", "Moneytalks"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    // create a hint
+    hint = "One of these songs are made by Motley Crue.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+    acdc++;
+}
+function questFiveSix() {
+    // create the question output
+    var q1 = ("What song is not made by Bob Marley?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["I Shot the Sheriff", "Buffalo Soldier", "Sweat (A La La La Long)", "No Woman, No Cry"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    // create a hint
+    hint = "One of these songs are made by Inner Circle.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    bob++;
+}
+function questSixSix() {
+    // create the question output
+    var q1 = ("What song is not made by Bruce Springsteen?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Like a Rolling Stone", "The River", "Hungry Heart", "Sleepy Joe's Café"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    // create a hint
+    hint = "One of these songs are made by Bob Dylan";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+    bruce++;
+}
 
 // create random question generator for question six
 
@@ -2159,7 +2300,7 @@ function randomQuestionSix() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 6
-    var random = Math.floor(Math.random() * 3);
+    var random = Math.floor(Math.random() * 6);
     callQuestSix = true;
 
     // put in the question functions
@@ -2172,6 +2313,15 @@ function randomQuestionSix() {
             break;
         case 2:
             questThreeSix();
+            break;
+        case 3:
+            questFourSix();
+            break;
+        case 4:
+            questFiveSix();
+            break;
+        case 5:
+            questSixSix();
             break;
     }
     // include the timer function
@@ -2250,6 +2400,72 @@ function questThreeSeven() {
     correctOpt = opt1[0];
     elvis++;
 }
+function questFourSeven() {
+    // create the question output
+    var q1 = ("What song won AC/DC their best rock grammy in 2010?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Rock 'N' Roll Train", "Black Ice", "Skies On Fire", "War Machine"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    // create a hint
+    hint = "It's either 'Black Ice' or 'War Machine'";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+    acdc++;
+}
+function questFiveSeven() {
+    // create the question output
+    var q1 = ("What year was Bob Marley presented with the 'Grammy Lifetime achievment award'?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["2001", "1998", "1980", "1975"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    // create a hint
+    hint = "It was after he passed away.";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+    bob++;
+}
+function questSixSeven() {
+    // create the question output
+    var q1 = ("What song won Bruce Springsteen 'Song of the Year' grammy award in 1995?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Youngstown", "The Ghost of Tom Joad", "Balboa Park", "Streets of Philadelphia"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    // create a hint
+    hint = "It was a song written for the movie 'Philadelphia";
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+    bruce++;
+}
 
 
 // create random question generator for question four
@@ -2260,7 +2476,7 @@ function randomQuestionSeven() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 7
-    var random = Math.floor(Math.random() * 3);
+    var random = Math.floor(Math.random() * 6);
     callQuestSeven = true;
 
     // put in the question functions
@@ -2273,6 +2489,15 @@ function randomQuestionSeven() {
             break;
         case 2:
             questThreeSeven();
+            break;
+        case 3:
+            questFourSeven();
+            break;
+        case 4:
+            questFiveSeven();
+            break;
+        case 5:
+            questSixSeven();
             break;
     }
     // include the timer function
@@ -2353,6 +2578,72 @@ function questThreeEight() {
     correctOpt = opt1[0];
     elvis++;
 }
+function questFourEight() {
+    // create the question output
+    var q1 = ("Which AC/DC album came first?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Powerage", "Flick of the Switch", "Highway to Hell", "High Voltage"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was a studio album released in 1976, it has the word 'high' in the title";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+    acdc++;
+}
+function questFiveEight() {
+    // create the question output
+    var q1 = ("Which Bob Marley album came first?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Burnin'", "Soul Rebels", "The Wailing Wailers", "Exodus"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was a studio album released in 1965 and is not one word.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    bob++;
+}
+function questSixEight() {
+    // create the question output
+    var q1 = ("Which Bruce Springsteen album came first?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Born to Run'", "Greetings from Asbury Park, N.J.", "The River", "Darkness on the Edge of Town"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in 1973.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = true;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[1];
+    bruce++;
+}
 
 // create random question generator for question 8
 
@@ -2362,7 +2653,7 @@ function randomQuestionEight() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 8
-    var random = Math.floor(Math.random() * 3);
+    var random = Math.floor(Math.random() * 6);
     callQuestEight = true;
 
     // put in the question functions
@@ -2375,6 +2666,15 @@ function randomQuestionEight() {
             break;
         case 2:
             questThreeEight();
+            break;
+        case 3:
+            questFourEight();
+            break;
+        case 4:
+            questFiveEight();
+            break;
+        case 5:
+            questSixEight();
             break;
     }
     // include the timer function
@@ -2457,6 +2757,72 @@ function questThreeNine() {
     correctOpt = opt1[3];
     elvis++;
 }
+function questFourNine() {
+    // create the question output
+    var q1 = ("What album was original AC/DC singer Bon Scotts last with the album?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Powerage", "Dirty Deeds Done Dirt Cheap", "Highway to Hell", "Let There Be Rock"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "The title song is one of AC/DC biggest hits.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    acdc++;
+}
+function questFiveNine() {
+    // create the question output
+    var q1 = ("What was Bob Marleys last album he released before the passed away?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Confrontation", "Survival", "Uprising", "Kaya"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released 1980. It's either Survival or Uprising";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    bob++;
+}
+function questSixNine() {
+    // create the question output
+    var q1 = ("Which of Bruce Springsteen's album came last?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Only the Strong Survive", "Letter To You", "Western Stars", "High Hopes"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released 2022.";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+    bruce++;
+}
 
 // create random question generator for question 9
 
@@ -2466,7 +2832,7 @@ function randomQuestionNine() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 9
-    var random = Math.floor(Math.random() * 3);
+    var random = Math.floor(Math.random() * 6);
     callQuestNine = true;
 
     // put in the question functions
@@ -2479,6 +2845,15 @@ function randomQuestionNine() {
             break;
         case 2:
             questThreeNine();
+            break;
+        case 3:
+            questFourNine();
+            break;
+        case 4: 
+            questFiveNine();
+            break;
+        case 5:
+            questSixNine();
             break;
     }
     // include the timer function
@@ -2563,7 +2938,78 @@ function questThreeTen() {
     correctOpt = opt1[1];
     elvis++;
 }
-
+function questFourTen() {
+    // create the question output
+    var q1 = ("Who sang on AC/DC's last tour?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Axl Rose", "Brian Johnson", "Arnel Pineda", "Steve Perry"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "He has not been a member of Journey";
+    // change the variables to the correct/incorrect answers
+    optA = true;
+    optB = false;
+    optC = false;
+    optD = false;
+    // set youHaveWon to the correct option so we know they have won
+    youHaveWon = optA;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[0];
+    acdc++;
+}
+function questFiveTen() {
+    // create the question output
+    var q1 = ("What was the name of Bob Marleys first solo single?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["Sun Is Shining", "Could You Be Loved", "Jamming", "Judge Not"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "It was released in 1962.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = false;
+    optD = true;
+    // set youHaveWon to the correct option so we know they have won
+    youHaveWon = optD;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[3];
+    bob++;
+}
+function questSixTen() {
+    // create the question output
+    var q1 = ("Bruce Springsteen hosts a podcast with a former US President. Who?");
+    question.innerText=q1;
+    // create the option outputs
+    var opt1 = ["George W. Bush", "Donald Trump", "Barack Obama", "Ronald Reagan"];
+    // update the outputs
+    optAInner.innerText=opt1[0];
+    optBInner.innerText=opt1[1];
+    optCInner.innerText=opt1[2];
+    optDInner.innerText=opt1[3];
+    // create a hint
+    hint = "He was the president between 2009-2017.";
+    // change the variables to the correct/incorrect answers
+    optA = false;
+    optB = false;
+    optC = true;
+    optD = false;
+    // set youHaveWon to the correct option so we know they have won
+    youHaveWon = optC;
+    //update correctOpt with the correct option to output when incorrect option is chosen
+    correctOpt = opt1[2];
+    bruce++;
+}
 // create random question generator for question ten
 
 function randomQuestionTen() {    
@@ -2572,7 +3018,7 @@ function randomQuestionTen() {
     // find the element
     level.innerText=levelNumber;
     // create the randomizer for question 10
-    var random = Math.floor(Math.random() * 3);
+    var random = Math.floor(Math.random() * 6);
     callQuestTen = true;
 
     // put in the question functions
@@ -2585,6 +3031,15 @@ function randomQuestionTen() {
             break;
         case 2: 
             questThreeTen();
+            break;
+        case 3:
+            questFourTen();
+            break;
+        case 4:
+            questFiveTen();
+            break;
+        case 5:
+            questSixTen();
             break;
     }
     // include the timer function
