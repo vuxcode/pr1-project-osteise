@@ -416,12 +416,12 @@ function questSeven() {
     // create a hint 
     hint = "Billy Idol made one of theese songs.";
     // change the variables to the correct/incorrect answers
-    optA = false;
-    optB = true;
+    optA = true;
+    optB = false;
     optC = false;
     optD = false;
     // update the correctOpt output to the correct answer
-    correctOpt = opt1[1];
+    correctOpt = opt1[0];
     bruce++;
 }
 // create question number eight function
