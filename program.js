@@ -13,39 +13,40 @@ var beatles;
 
 // turn artists in local storage into 0 if NaN
 function turnArtists() {
-    if (isNaN(localStorage.getItem("saved_mj"))) {
+    if (Number.isNaN(localStorage.getItem("saved_mj"))) {
         localStorage.setItem("saved_mj") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_acdc"))) {
+    if (Number.isNaN(localStorage.getItem("saved_acdc"))) {
         localStorage.setItem("saved_acdc") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_bruce"))) {
+    if (Number.isNaN(localStorage.getItem("saved_bruce"))) {
         localStorage.setItem("saved_bruce") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_abba"))) {
+    if (Number.isNaN(localStorage.getItem("saved_abba"))) {
         localStorage.setItem("saved_abba") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_elvis"))) {
+    if (Number.isNaN(localStorage.getItem("saved_elvis"))) {
         localStorage.setItem("saved_elvis") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_cash"))) {
+    if (Number.isNaN(localStorage.getItem("saved_cash"))) {
         localStorage.setItem("saved_cash") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_mc"))) {
+    if (Number.isNaN(localStorage.getItem("saved_mc"))) {
         localStorage.setItem("saved_mc") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_bob"))) {
+    if (Number.isNaN(localStorage.getItem("saved_bob"))) {
         localStorage.setItem("saved_bob") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_elton"))) {
+    if (Number.isNaN(localStorage.getItem("saved_elton"))) {
         localStorage.setItem("saved_elton") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_queen"))) {
+    if (Number.isNaN(localStorage.getItem("saved_queen"))) {
         localStorage.setItem("saved_queen") = 0;
     }
-    if (isNaN(localStorage.getItem("saved_beatles"))) {
+    if (Number.isNaN(localStorage.getItem("saved_beatles"))) {
         localStorage.setItem("saved_beatles") = 0;
     }
+    console.log("new verison");
 }
 // run it upon load
 turnArtists();
