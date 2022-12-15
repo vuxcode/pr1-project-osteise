@@ -10,19 +10,59 @@ var bob;
 var elton;
 var queen;
 var beatles;
+
+// turn artists in local storage into 0 if NaN
+function turnArtists() {
+    if (isNaN(localStorage.getItem("saved_mj"))) {
+        localStorage.setItem("saved_mj") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_acdc"))) {
+        localStorage.setItem("saved_acdc") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_bruce"))) {
+        localStorage.setItem("saved_bruce") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_abba"))) {
+        localStorage.setItem("saved_abba") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_elvis"))) {
+        localStorage.setItem("saved_elvis") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_cash"))) {
+        localStorage.setItem("saved_cash") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_mc"))) {
+        localStorage.setItem("saved_mc") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_bob"))) {
+        localStorage.setItem("saved_bob") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_elton"))) {
+        localStorage.setItem("saved_elton") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_queen"))) {
+        localStorage.setItem("saved_queen") = 0;
+    }
+    if (isNaN(localStorage.getItem("saved_beatles"))) {
+        localStorage.setItem("saved_beatles") = 0;
+    }
+}
+// run it upon load
+turnArtists();
+
 // create a function to set the values to the values in the local storage
 function getArtists() {
-    mj = 0 + localStorage.getItem("saved_mj");
-    acdc = 0 + localStorage.getItem("saved_acdc");
-    bruce = 0 + localStorage.getItem("saved_bruce");
-    abba = 0 + localStorage.getItem("saved_abba");
-    elvis = 0 + localStorage.getItem("saved_elvis");
-    cash = 0 +localStorage.getItem("saved_cash");
-    mc = 0 + localStorage.getItem("saved_mc");
-    bob = 0 + localStorage.getItem("saved_bob");
-    elton = 0 + localStorage.getItem("saved_elton");
-    queen = 0 + localStorage.getItem("saved_queen");
-    beatles = 0 + localStorage.getItem("saved_beatles");
+    mj = localStorage.getItem("saved_mj");
+    acdc = localStorage.getItem("saved_acdc");
+    bruce = localStorage.getItem("saved_bruce");
+    abba = localStorage.getItem("saved_abba");
+    elvis = localStorage.getItem("saved_elvis");
+    cash = localStorage.getItem("saved_cash");
+    mc = localStorage.getItem("saved_mc");
+    bob = localStorage.getItem("saved_bob");
+    elton = localStorage.getItem("saved_elton");
+    queen = localStorage.getItem("saved_queen");
+    beatles = localStorage.getItem("saved_beatles");
 }
 // run the function upon load
 getArtists();
