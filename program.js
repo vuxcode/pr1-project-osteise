@@ -11,10 +11,8 @@ var elton = Number(elton);
 var queen = Number(queen);
 var beatles = Number(beatles);
 
-
 // turn artists in local storage into 0 if NaN
 function turnArtists() {
-    console.log("new version 1.1");
     if (Number.isNaN(localStorage.getItem("saved_mj"))) {
         localStorage.setItem("saved_mj", mj) = 0;
     }
@@ -68,7 +66,6 @@ function getArtists() {
 }
 // run the function upon load
 getArtists();
-
 
 // create a function to push it into the localstorage
 function pushArtist() {
@@ -136,9 +133,6 @@ function abort() {
     // push artists 
     pushArtist();
 }
-// create a variable to target the timer box
-// var displayTime = document.getElementById("timerInner");
-// displayTime.innerHTML = number;
 
 // create variables and add the buttons
 var question = document.getElementById("qOneInner");
@@ -1138,19 +1132,16 @@ function ifWrongA(newColorGreen) {
     // update the color
     changeIfWrongA.style.background = newColorGreen;
 }
-
 // do the same thing with option B button
 function ifWrongB(newColorGreen) {
     var changeIfWrongB = document.getElementById('optionB');
     changeIfWrongB.style.background = newColorGreen;
 }
-
 // do the same thing with option C button
 function ifWrongC(newColorGreen) {
     var changeIfWrongC = document.getElementById('optionC');
     changeIfWrongC.style.background = newColorGreen;
 }
-
 // do the same thing with option D button
 function ifWrongD(newColorGreen) {
     var changeIfWrongD = document.getElementById('optionD');
@@ -2159,9 +2150,7 @@ function questSixFive() {
     correctOpt = opt1[1];
     bruce++;
 }
-
 // create random question generator for question five
-
 function randomQuestionFive() {    
     // change the level number to 5
     var levelNumber = ("Question 5");
@@ -2200,7 +2189,6 @@ function randomQuestionFive() {
 }
 
 // QUESTION SIX
-
 function questOneSix() {
     // create the question output
     var q1 = ("What song is not made by Michael Jackson?");
@@ -2333,9 +2321,7 @@ function questSixSix() {
     correctOpt = opt1[0];
     bruce++;
 }
-
 // create random question generator for question six
-
 function randomQuestionSix() {    
     // change the level number to 6
     var levelNumber = ("Question 6");
@@ -2373,9 +2359,7 @@ function randomQuestionSix() {
     updateX();
 }
 
-
 // QUESTION SEVEN
-
 function questOneSeven() {
     // create the question output
     var q1 = ("What song was Michael Jacksons US #1 Billboard hit the longest?");
@@ -2508,10 +2492,7 @@ function questSixSeven() {
     correctOpt = opt1[3];
     bruce++;
 }
-
-
 // create random question generator for question four
-
 function randomQuestionSeven() {    
     // change the level number to 7
     var levelNumber = ("Question 7");
@@ -2549,11 +2530,7 @@ function randomQuestionSeven() {
     updateX();
 }
 
-
-
-
 // QUESTION EIGHT
-
 function questOneEight() {
     // create the question output
     var q1 = ("What was the name of the first record label that signed Michael Jackson?");
@@ -2686,9 +2663,7 @@ function questSixEight() {
     correctOpt = opt1[1];
     bruce++;
 }
-
 // create random question generator for question 8
-
 function randomQuestionEight() {    
     // change the level number to 8
     var levelNumber = ("Question 8");
@@ -2726,13 +2701,7 @@ function randomQuestionEight() {
     updateX();
 }
 
-
-
-
-
-
 // QUESTION NINE
-
 function questOneNine() {
     // create the question output
     var q1 = ("Which of Michael Jacksons brothers was not originally in Jackson 5?");
@@ -2865,9 +2834,7 @@ function questSixNine() {
     correctOpt = opt1[0];
     bruce++;
 }
-
 // create random question generator for question 9
-
 function randomQuestionNine() {    
     // change the level number to 9
     var levelNumber = ("Question 9");
@@ -2905,9 +2872,7 @@ function randomQuestionNine() {
     updateX();
 }
 
-
 // QUESTION TEN
-
 function questOneTen() {
     // create the question output
     var q1 = ("Which of these songs were not a single on a Michael Jackson album?");
@@ -3053,7 +3018,6 @@ function questSixTen() {
     bruce++;
 }
 // create random question generator for question ten
-
 function randomQuestionTen() {    
     // change the level number to 10
     var levelNumber = ("Question 10");
@@ -3295,8 +3259,6 @@ function callNextQuestion() {
 var canvas = document.getElementById("timerCanvas");
 // get the 2d context of the canvas and save it in a variable
 var ctx = canvas.getContext("2d");
-// clear the canvas 
-// ctx.clearRect(0, 0, canvas.width, canvas.height);
 canvas.width = 800;
 canvas.height = 50;
 // create a function to clear the canvas
@@ -3342,8 +3304,6 @@ var element = document.body;
 
 // create a variable to store what theme is being used
 var modeSet;
-// set the local storage
-// localStorage.setItem("saved_theme");
 // get the variable from the local storage
 modeSet = localStorage.getItem("saved_theme");
 
@@ -3360,7 +3320,7 @@ else if (modeSet == "light") {
     element.classList = "light-mode";
 }
 }
-
+// run the function upon load
 defaultTheme();
 
 // create a function to swap to and from darkmode

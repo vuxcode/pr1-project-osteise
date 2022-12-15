@@ -12,7 +12,8 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 # Project Summary
 
-> I have created a music quiz program. There has been some issues along the way, but I have been able to solve them, so the program should work as expected. 
+> I have created a music quiz program. There has been some issues along the way, but I have been able to solve (most) them, so the program should work as expected, although I have been having some problems with the local storage on the deployment site, I did however not have these problems with my local files. 
+I feel that I have learned alot from this project, as I didn't have previous experience with JavaScript before this course. In the later stages of developing this program I started to see how I would be able to make the code more efficient. I didn't really change alot of the things that I learned because, mainly, it worked as it was, and that I can look back and see both methods, one example of this is when I change the colors of the boxes I use different functions to target both the buttons and the colors, but when I wanted to add some yellow effects upon winning I created one function with both the colors and targetting the buttons.     
 
 # User Guide
 
