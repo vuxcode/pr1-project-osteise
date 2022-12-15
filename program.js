@@ -12,17 +12,17 @@ var queen;
 var beatles;
 // create a function to set the values to the values in the local storage
 function getArtists() {
-    mj = localStorage.getItem("saved_mj");
-    acdc = localStorage.getItem("saved_acdc");
-    bruce = localStorage.getItem("saved_bruce");
-    abba = localStorage.getItem("saved_abba");
-    elvis = localStorage.getItem("saved_elvis");
-    cash = localStorage.getItem("saved_cash");
-    mc = localStorage.getItem("saved_mc");
-    bob = localStorage.getItem("saved_bob");
-    elton = localStorage.getItem("saved_elton");
-    queen = localStorage.getItem("saved_queen");
-    beatles = localStorage.getItem("saved_beatles");
+    mj = 0 + localStorage.getItem("saved_mj");
+    acdc = 0 + localStorage.getItem("saved_acdc");
+    bruce = 0 + localStorage.getItem("saved_bruce");
+    abba = 0 + localStorage.getItem("saved_abba");
+    elvis = 0 + localStorage.getItem("saved_elvis");
+    cash = 0 +localStorage.getItem("saved_cash");
+    mc = 0 + localStorage.getItem("saved_mc");
+    bob = 0 + localStorage.getItem("saved_bob");
+    elton = 0 + localStorage.getItem("saved_elton");
+    queen = 0 + localStorage.getItem("saved_queen");
+    beatles = 0 + localStorage.getItem("saved_beatles");
 }
 // run the function upon load
 getArtists();
