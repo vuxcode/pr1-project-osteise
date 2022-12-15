@@ -11,8 +11,26 @@ var elton = Number(elton);
 var queen = Number(queen);
 var beatles = Number(beatles);
 
+// create a function to set the values to the values in the local storage
+function getArtists() {
+    mj = localStorage.getItem("saved_mj");
+    acdc = localStorage.getItem("saved_acdc");
+    bruce = localStorage.getItem("saved_bruce");
+    abba = localStorage.getItem("saved_abba");
+    elvis = localStorage.getItem("saved_elvis");
+    cash = localStorage.getItem("saved_cash");
+    mc = localStorage.getItem("saved_mc");
+    bob = localStorage.getItem("saved_bob");
+    elton = localStorage.getItem("saved_elton");
+    queen = localStorage.getItem("saved_queen");
+    beatles = localStorage.getItem("saved_beatles");
+}
+// run the function upon load
+getArtists();
+
 // turn artists in local storage into 0 if NaN
 function turnArtists() {
+    console.log("new version 1.1");
     if (Number.isNaN(localStorage.getItem("saved_mj"))) {
         localStorage.setItem("saved_mj", mj) = 0;
     }
@@ -46,27 +64,10 @@ function turnArtists() {
     if (Number.isNaN(localStorage.getItem("saved_beatles"))) {
         localStorage.setItem("saved_beatles", beatles) = 0;
     }
-    console.log("new verison 1");
 }
 // run it upon load
 turnArtists();
 
-// create a function to set the values to the values in the local storage
-function getArtists() {
-    mj = localStorage.getItem("saved_mj");
-    acdc = localStorage.getItem("saved_acdc");
-    bruce = localStorage.getItem("saved_bruce");
-    abba = localStorage.getItem("saved_abba");
-    elvis = localStorage.getItem("saved_elvis");
-    cash = localStorage.getItem("saved_cash");
-    mc = localStorage.getItem("saved_mc");
-    bob = localStorage.getItem("saved_bob");
-    elton = localStorage.getItem("saved_elton");
-    queen = localStorage.getItem("saved_queen");
-    beatles = localStorage.getItem("saved_beatles");
-}
-// run the function upon load
-getArtists();
 
 
 // create a function to push it into the localstorage
