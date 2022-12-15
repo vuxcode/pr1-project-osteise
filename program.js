@@ -1,95 +1,55 @@
 // create a variable for all artists to store in the localstorage
-var mj;
-var acdc;
-var bruce;
-var abba;
-var elvis;
-var cash;
-var mc;
-var bob;
-var elton;
-var queen;
-var beatles;
-
-// // turn artists in local storage into 0 if NaN
-// function turnArtists() {
-//     if (Number.isNaN(localStorage.getItem("saved_mj"))) {
-//         localStorage.setItem("saved_mj", mj) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_acdc"))) {
-//         localStorage.setItem("saved_acdc", acdc) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_bruce"))) {
-//         localStorage.setItem("saved_bruce", bruce) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_abba"))) {
-//         localStorage.setItem("saved_abba", abba) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_elvis"))) {
-//         localStorage.setItem("saved_elvis", elvis) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_cash"))) {
-//         localStorage.setItem("saved_cash", cash) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_mc"))) {
-//         localStorage.setItem("saved_mc", mc) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_bob"))) {
-//         localStorage.setItem("saved_bob", bob) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_elton"))) {
-//         localStorage.setItem("saved_elton", elton) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_queen"))) {
-//         localStorage.setItem("saved_queen", queen) = 0;
-//     }
-//     if (Number.isNaN(localStorage.getItem("saved_beatles"))) {
-//         localStorage.setItem("saved_beatles", beatles) = 0;
-//     }
-//     console.log("new verison");
-// }
-// // run it upon load
-// turnArtists();
+var mj = Number(mj);
+var acdc = Number(acdc);
+var bruce = Number(bruce);
+var abba = Number(abba);
+var elvis = Number(elvis);
+var cash = Number(cash);
+var mc = Number(mc);
+var bob = Number(bob);
+var elton = Number(elton);
+var queen = Number(queen);
+var beatles = Number(beatles);
 
 // turn artists in local storage into 0 if NaN
 function turnArtists() {
-    if (localStorage.getItem("saved_mj") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_mj"))) {
         localStorage.setItem("saved_mj", mj) = 0;
     }
-    if (localStorage.getItem("saved_acdc") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_acdc"))) {
         localStorage.setItem("saved_acdc", acdc) = 0;
     }
-    if (localStorage.getItem("saved_bruce") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_bruce"))) {
         localStorage.setItem("saved_bruce", bruce) = 0;
     }
-    if (localStorage.getItem("saved_abba") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_abba"))) {
         localStorage.setItem("saved_abba", abba) = 0;
     }
-    if (localStorage.getItem("saved_elvis") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_elvis"))) {
         localStorage.setItem("saved_elvis", elvis) = 0;
     }
-    if (localStorage.getItem("saved_cash") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_cash"))) {
         localStorage.setItem("saved_cash", cash) = 0;
     }
-    if (localStorage.getItem("saved_mc") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_mc"))) {
         localStorage.setItem("saved_mc", mc) = 0;
     }
-    if (localStorage.getItem("saved_bob") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_bob"))) {
         localStorage.setItem("saved_bob", bob) = 0;
     }
-    if (localStorage.getItem("saved_elton") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_elton"))) {
         localStorage.setItem("saved_elton", elton) = 0;
     }
-    if (localStorage.getItem("saved_queen") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_queen"))) {
         localStorage.setItem("saved_queen", queen) = 0;
     }
-    if (localStorage.getItem("saved_beatles") == false) {
+    if (Number.isNaN(localStorage.getItem("saved_beatles"))) {
         localStorage.setItem("saved_beatles", beatles) = 0;
     }
-    console.log("new verison");
+    console.log("new verison 1");
 }
-
-
+// run it upon load
+turnArtists();
 
 // create a function to set the values to the values in the local storage
 function getArtists() {
