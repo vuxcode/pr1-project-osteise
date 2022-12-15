@@ -11,45 +11,85 @@ var elton;
 var queen;
 var beatles;
 
+// // turn artists in local storage into 0 if NaN
+// function turnArtists() {
+//     if (Number.isNaN(localStorage.getItem("saved_mj"))) {
+//         localStorage.setItem("saved_mj", mj) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_acdc"))) {
+//         localStorage.setItem("saved_acdc", acdc) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_bruce"))) {
+//         localStorage.setItem("saved_bruce", bruce) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_abba"))) {
+//         localStorage.setItem("saved_abba", abba) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_elvis"))) {
+//         localStorage.setItem("saved_elvis", elvis) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_cash"))) {
+//         localStorage.setItem("saved_cash", cash) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_mc"))) {
+//         localStorage.setItem("saved_mc", mc) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_bob"))) {
+//         localStorage.setItem("saved_bob", bob) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_elton"))) {
+//         localStorage.setItem("saved_elton", elton) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_queen"))) {
+//         localStorage.setItem("saved_queen", queen) = 0;
+//     }
+//     if (Number.isNaN(localStorage.getItem("saved_beatles"))) {
+//         localStorage.setItem("saved_beatles", beatles) = 0;
+//     }
+//     console.log("new verison");
+// }
+// // run it upon load
+// turnArtists();
+
 // turn artists in local storage into 0 if NaN
 function turnArtists() {
-    if (Number.isNaN(localStorage.getItem("saved_mj"))) {
+    if (localStorage.getItem("saved_mj") == false) {
         localStorage.setItem("saved_mj", mj) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_acdc"))) {
+    if (localStorage.getItem("saved_acdc") == false) {
         localStorage.setItem("saved_acdc", acdc) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_bruce"))) {
+    if (localStorage.getItem("saved_bruce") == false) {
         localStorage.setItem("saved_bruce", bruce) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_abba"))) {
+    if (localStorage.getItem("saved_abba") == false) {
         localStorage.setItem("saved_abba", abba) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_elvis"))) {
+    if (localStorage.getItem("saved_elvis") == false) {
         localStorage.setItem("saved_elvis", elvis) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_cash"))) {
+    if (localStorage.getItem("saved_cash") == false) {
         localStorage.setItem("saved_cash", cash) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_mc"))) {
+    if (localStorage.getItem("saved_mc") == false) {
         localStorage.setItem("saved_mc", mc) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_bob"))) {
+    if (localStorage.getItem("saved_bob") == false) {
         localStorage.setItem("saved_bob", bob) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_elton"))) {
+    if (localStorage.getItem("saved_elton") == false) {
         localStorage.setItem("saved_elton", elton) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_queen"))) {
+    if (localStorage.getItem("saved_queen") == false) {
         localStorage.setItem("saved_queen", queen) = 0;
     }
-    if (Number.isNaN(localStorage.getItem("saved_beatles"))) {
+    if (localStorage.getItem("saved_beatles") == false) {
         localStorage.setItem("saved_beatles", beatles) = 0;
     }
     console.log("new verison");
 }
-// run it upon load
-turnArtists();
+
+
 
 // create a function to set the values to the values in the local storage
 function getArtists() {
